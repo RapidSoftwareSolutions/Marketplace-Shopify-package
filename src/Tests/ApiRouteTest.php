@@ -49,8 +49,7 @@ class ApiRouteTest extends \PHPUnit_Framework_TestCase
             // Output Test info
             print($this->router->getRouter()->response()->code() . ' - ' . $route['route'] . "\n");
 
-            //$this->assertEquals(200, $this->router->getRouter()->response()->code());
-            $this->assertEquals(200, 200);
+            $this->assertEquals(200, $this->router->getRouter()->response()->code());
         }
         // Beautify output
         print("\n");

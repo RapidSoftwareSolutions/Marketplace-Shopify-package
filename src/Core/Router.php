@@ -265,8 +265,6 @@ class Router
             $sendBody = '';
         }
 
-//        return [$url, $method, $accessToken, $sendBody];
-
         $result = [];
         try {
             // Setup client

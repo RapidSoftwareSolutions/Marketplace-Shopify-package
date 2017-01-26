@@ -242,11 +242,4 @@ class CustomModel
     {
         return self::createSmartCollection($param, $blockCustom, $vendorUrl);
     }
-
-    public static function updateProductsInSmartCollection($param, $blockCustom, $vendorUrl)
-    {
-        $result = $param;
-
-        return json_encode($result);
-    }
 }
