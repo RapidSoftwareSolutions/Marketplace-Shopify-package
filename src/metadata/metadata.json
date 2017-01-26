@@ -1,0 +1,3948 @@
+{
+  "package": "Shopify",
+  "tagline": "powerfull platform for ecommerce",
+  "description": "Shopify is platform for ecommerce.",
+  "image": "https://logo.clearbit.com/shopify.com?s=128",
+  "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Shopify-package",
+  "keywords": [
+    "API", "ecommerce", "service", "Shopify"
+  ],
+  "accounts": {
+    "domain": "shopify.com",
+    "credentials": [
+      "shopName", "clientId", "clientSecret", "code"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getAccessToken",
+      "description": "Get access token from code provided in the redirect described.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "clientId",
+          "type": "credentials",
+          "info": "The API Key for the app.",
+          "required": true
+        },
+        {
+          "name": "clientSecret",
+          "type": "credentials",
+          "info": "The Shared Secret for the app (Credential sets).",
+          "required": true
+        },
+        {
+          "name": "code",
+          "type": "credentials",
+          "info": "The authorization code provided in the redirect described.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getAbandonedCheckoutsCount",
+      "description": "Get a count of checkouts.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "createdAtMin",
+          "type": "String",
+          "info": "Show checkouts created after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "createdAtMax",
+          "type": "String",
+          "info": "Show checkouts created before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Show checkouts last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Show checkouts last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "info": "open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getAbandonedCheckouts",
+      "description": "List all abandoned checkouts.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "createdAtMin",
+          "type": "String",
+          "info": "Show checkouts created after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "createdAtMax",
+          "type": "String",
+          "info": "Show checkouts created before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Show checkouts last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Show checkouts last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "status",
+          "type": "String",
+          "info": "open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createCheckout",
+      "description": "Create a new Checkout.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "The customer's email address.",
+          "required": false
+        },
+        {
+          "name": "lineItemsVariantId",
+          "type": "Number",
+          "info": "The id of the product variant.",
+          "required": false
+        },
+        {
+          "name": "lineItemsQuantity",
+          "type": "Number",
+          "info": "The number of products that were purchased.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleCheckout",
+      "description": "Get a single Checkout.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "token",
+          "type": "String",
+          "info": "Unique identifier for a particular checkout.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateCheckout",
+      "description": "Modify an existing Checkout.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "token",
+          "type": "String",
+          "info": "Unique identifier for a particular checkout.",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "The customer's email address.",
+          "required": false
+        },
+        {
+          "name": "shippingAddressFirstName",
+          "type": "String",
+          "info": "The first name of the person associated with the payment method.",
+          "required": false
+        },
+        {
+          "name": "shippingAddressLastName",
+          "type": "String",
+          "info": "The last name of the person associated with the payment method.",
+          "required": false
+        },
+        {
+          "name": "shippingAddressAddress1",
+          "type": "String",
+          "info": "The street address of the shipping address.",
+          "required": false
+        },
+        {
+          "name": "shippingAddressCity",
+          "type": "String",
+          "info": "The city of the shipping address.",
+          "required": false
+        },
+        {
+          "name": "shippingAddressProvinceCode",
+          "type": "String",
+          "info": "The two-letter abbreviation of the state or province of the shipping address.",
+          "required": false
+        },
+        {
+          "name": "shippingAddressCountryCode",
+          "type": "String",
+          "info": "The two-letter code for the country of the shipping address.",
+          "required": false
+        },
+        {
+          "name": "shippingAddressPhone",
+          "type": "String",
+          "info": "The phone number at the shipping address.",
+          "required": false
+        },
+        {
+          "name": "shippingAddressZip",
+          "type": "String",
+          "info": "The zip or postal code of the shipping address.",
+          "required": false
+        },
+        {
+          "name": "reservationTime",
+          "type": "Number",
+          "info": "The reservation time in seconds for the products in the line items. This can be set up to 5 minutes, or 1 hour depending on the authentication type used.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getShippingRates",
+      "description": "Get a list of available shipping rates for the specified checkout. Implementers need to poll this API until rates become available. Each shipping rate will also contain the checkout's subtotal_price, total_tax and total_price in the event that this shipping rate is selected. This can be used to update the UI without performing a road-trip to API.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "token",
+          "type": "String",
+          "info": "Unique identifier for a particular checkout.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleCheckoutPayments",
+      "description": "Retreive a list of Payments on a particular Checkout.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "token",
+          "type": "String",
+          "info": "Unique identifier for a particular checkout.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createPayment",
+      "description": "Create a new payment.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "token",
+          "type": "String",
+          "info": "Unique identifier for a particular checkout.",
+          "required": true
+        },
+        {
+          "name": "requestDetailsIpAddress",
+          "type": "String",
+          "info": "The IP address of the customer.",
+          "required": false
+        },
+        {
+          "name": "requestDetailsAcceptLanguage",
+          "type": "String",
+          "info": "A string identifying the customer's preferred language, formatted according to the Accept-Language header as defined in RFC2616 Section 14.4.",
+          "required": false
+        },
+        {
+          "name": "requestDetailsUserAgent",
+          "type": "String",
+          "info": "A string identifying the customer's user agent.",
+          "required": false
+        },
+        {
+          "name": "amount",
+          "type": "String",
+          "info": "Amount of payment.",
+          "required": false
+        },
+        {
+          "name": "sessionId",
+          "type": "String",
+          "info": "Represents the id that was returned by the card vault.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSinglePayment",
+      "description": "Get a single Checkout.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "token",
+          "type": "String",
+          "info": "Unique identifier for a particular checkout.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "countCheckoutPayments",
+      "description": "Count the number of Payments attempted on a Checkout.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "token",
+          "type": "String",
+          "info": "Unique identifier for a particular checkout.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "storeCreditCardInVault",
+      "description": "Create a payment session.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "creditCardNumber",
+          "type": "String",
+          "info": "Credit card number.",
+          "required": true
+        },
+        {
+          "name": "creditCardFirstName",
+          "type": "String",
+          "info": "Credit card owner first name.",
+          "required": true
+        },
+        {
+          "name": "creditCardLastName",
+          "type": "String",
+          "info": "Credit card owner last name.",
+          "required": true
+        },
+        {
+          "name": "creditCardMonth",
+          "type": "String",
+          "info": "Credit card expiry date month.",
+          "required": true
+        },
+        {
+          "name": "creditCardYear",
+          "type": "String",
+          "info": "Credit card expiry date year.",
+          "required": true
+        },
+        {
+          "name": "creditCardVerificationValue",
+          "type": "String",
+          "info": "Credit card verification value.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "addProductToCollection",
+      "description": "Add a product to a collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "collectionId",
+          "type": "Number",
+          "info": "The id of the custom collection containing the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "removeProductFromCollection",
+      "description": "Remove a product from a collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "collectId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the collect.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getCollects",
+      "description": "List all collects or only those for specific products or collections.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": false
+        },
+        {
+          "name": "collectionId",
+          "type": "Number",
+          "info": "The id of the custom collection containing the product.",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getCollectsCount",
+      "description": "Get a count of all collects or only those for specific products or collections.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": false
+        },
+        {
+          "name": "collectionId",
+          "type": "Number",
+          "info": "The id of the custom collection containing the product.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleCollect",
+      "description": "Get the collect with a certain id, or for a given product AND collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "collectionId",
+          "type": "Number",
+          "info": "The id of the custom collection containing the product.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getCustomCollections",
+      "description": "Get a list of all custom collections that contain a given product.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "ids",
+          "type": "String",
+          "info": "A comma-separated list of collection ids.",
+          "required": false
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Show custom collections with given title.",
+          "required": false
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "Show custom collections that includes given product.",
+          "required": false
+        },
+        {
+          "name": "handle",
+          "type": "String",
+          "info": "Filter by custom collection handle.",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Show custom collections last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Show custom collections last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMin",
+          "type": "String",
+          "info": "Show custom collections published after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMax",
+          "type": "String",
+          "info": "Show custom collections published before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedStatus",
+          "type": "String",
+          "info": "published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getCustomCollectionsCount",
+      "description": "Get a count of all custom collections that contain a given product.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Count custom collections with given title.",
+          "required": false
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "Count custom collections that includes given product.",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Count custom collections last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Count custom collections last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMin",
+          "type": "String",
+          "info": "Show custom collections published after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMax",
+          "type": "String",
+          "info": "Show custom collections published before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedStatus",
+          "type": "String",
+          "info": "published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).",
+          "required": false
+        }
+
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleCustomCollection",
+      "description": "Get a single custom collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "collectionId",
+          "type": "Number",
+          "info": "The id of the custom collection containing the product.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createCustomCollection",
+      "description": "Create a new custom collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Collections title.",
+          "required": true
+        },
+        {
+          "name": "imageSrc",
+          "type": "File",
+          "info": "Image associated with the custom collection.",
+          "required": false
+        },
+        {
+          "name": "collectsProductId",
+          "type": "Numder",
+          "info": "The unique numeric identifier for the product.",
+          "required": false
+        },
+        {
+          "name": "published",
+          "type": "Boolean",
+          "info": "Is published collection.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateCustomCollection",
+      "description": "Update an existing custom collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "collectionId",
+          "type": "Number",
+          "info": "The id of the custom collection containing the product.",
+          "required": true
+        },
+        {
+          "name": "handle",
+          "type": "String",
+          "info": "A human-friendly unique string for the custom collection automatically generated from its title. This is used in shop themes by the Liquid templating language to refer to the custom collection. Limit of 255 characters.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Collections title.",
+          "required": false
+        },
+        {
+          "name": "imageSrc",
+          "type": "File",
+          "info": "Image associated with the custom collection.",
+          "required": false
+        },
+        {
+          "name": "collectsProductId",
+          "type": "Numder",
+          "info": "The unique numeric identifier for the product.",
+          "required": false
+        },
+        {
+          "name": "published",
+          "type": "Boolean",
+          "info": "Is published collections.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteCustomCollection",
+      "description": "Remove custom collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "collectionId",
+          "type": "Number",
+          "info": "The id of the custom collection containing the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getCustomers",
+      "description": "Retrieve all customers of a shop.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "ids",
+          "type": "String",
+          "info": "A comma-separated list of customer ids.",
+          "required": false
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "createdAtMin",
+          "type": "String",
+          "info": "Show customers created after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "createdAtMax",
+          "type": "String",
+          "info": "Show customers created before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Show customers last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Show customers last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "searchCustomers",
+      "description": "Search customers.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "order",
+          "type": "String",
+          "info": "Field and direction to order results by (default: last_order_date DESC).",
+          "required": false
+        },
+        {
+          "name": "query",
+          "type": "String",
+          "info": "Text to search customers.",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleCustomer",
+      "description": "Get a single customer.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "customerId",
+          "type": "String",
+          "info": "The id of the customer.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createCustomer",
+      "description": "Create a new customer.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "firstName",
+          "type": "String",
+          "info": "The customer's first name.",
+          "required": true
+        },
+        {
+          "name": "lastName",
+          "type": "String",
+          "info": "The customer's last name.",
+          "required": true
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "The email address of the customer.",
+          "required": false
+        },
+        {
+          "name": "phone",
+          "type": "String",
+          "info": "The phone number for the customer. Valid formats can be of different types, for example: 6135551212, +16135551212, 555-1212, (613)555-1212, +1 613-555-1212.",
+          "required": false
+        },
+        {
+          "name": "verifiedEmail",
+          "type": "Boolean",
+          "info": "States whether or not the email address has been verified.",
+          "required": false
+        },
+        {
+          "name": "sendEmailInvite",
+          "type": "Boolean",
+          "info": "If true, Invite E-mail will be send.",
+          "required": false
+        },
+        {
+          "name": "sendEmailWelcome",
+          "type": "Boolean",
+          "info": "If true, Welcome E-mail will be send.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateCustomer",
+      "description": "Update a customer.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "customerId",
+          "type": "String",
+          "info": "The id of the customer.",
+          "required": true
+        },
+        {
+          "name": "firstName",
+          "type": "String",
+          "info": "The customer's first name.",
+          "required": false
+        },
+        {
+          "name": "lastName",
+          "type": "String",
+          "info": "The customer's last name.",
+          "required": false
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "info": "The email address of the customer.",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "Tags are additional short descriptors formatted as a string of comma-separated values. For example, if an article has three tags: tag1, tag2, tag3.",
+          "required": false
+        },
+        {
+          "name": "note",
+          "type": "String",
+          "info": "A note about the customer.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createAccountActivationURL",
+      "description": "This endpoint allows you to generate and retrieve an account activation URL for a customer who is not yet enabled. This is useful if you've imported a large number of customers and want to send them activation emails all at once (using this approach, you'll need to generate and send the activation emails yourself). The account activation URL generated by this endpoint is one time use and will expire after 7 days. If you make a new POST request to this endpoint, a new URL will be generated which will be again valid for 7 days, but the previous URL will no longer be valid.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "customerId",
+          "type": "String",
+          "info": "The id of the customer.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteCustomer",
+      "description": "Delete a customer. A customer can't be deleted if they have existing orders.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "customerId",
+          "type": "String",
+          "info": "The id of the customer.",
+          "required": true
+        }
+
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getCustomersCount",
+      "description": "Get a count of all customers.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getCustomerOrders",
+      "description": "Get all orders belonging to this customer.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "customerId",
+          "type": "String",
+          "info": "The id of the customer.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getEvents",
+      "description": "Get the events from a particular product.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "objectType",
+          "type": "String",
+          "info": "Name type of object of event (products, orders).",
+          "required": false
+        },
+        {
+          "name": "objectTypeId",
+          "type": "String",
+          "info": "Type identifier of object of event.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "createdAtMin",
+          "type": "String",
+          "info": "Show events created at or after date and time (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "createdAtMax",
+          "type": "String",
+          "info": "Show events created at or before date and time (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "filter",
+          "type": "String",
+          "info": "Only show events specified in filter.",
+          "required": false
+        },
+        {
+          "name": "verb",
+          "type": "String",
+          "info": "Only show events of a certain kind.",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleEvent",
+      "description": "The unique numeric identifier for the event.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "eventId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the event.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getEventByType",
+      "description": ".",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "objectType",
+          "type": "String",
+          "info": "Name type of object of event (products, orders).",
+          "required": true
+        },
+        {
+          "name": "objectTypeId",
+          "type": "String",
+          "info": "The unique numeric identifier of the object.",
+          "required": true
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "createdAtMin",
+          "type": "String",
+          "info": "Show events created at or after date and time (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "createdAtMax",
+          "type": "String",
+          "info": "Show events created at or before date and time (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "filter",
+          "type": "String",
+          "info": "Only show events specified in filter.",
+          "required": false
+        },
+        {
+          "name": "verb",
+          "type": "String",
+          "info": "Only show events of a certain kind.",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getEventsCount",
+      "description": ".",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "createdAtMin",
+          "type": "String",
+          "info": "Count events created at or after date and time (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "createdAtMax",
+          "type": "String",
+          "info": "Count events created at or before date and time (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getProducts",
+      "description": "Get a list of products.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "ids",
+          "type": "String",
+          "info": "A comma-separated list of product ids.",
+          "required": false
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Filter by product title.",
+          "required": false
+        },
+        {
+          "name": "vendor",
+          "type": "String",
+          "info": "Filter by product vendor.",
+          "required": false
+        },
+        {
+          "name": "handle",
+          "type": "String",
+          "info": "Filter by product handle.",
+          "required": false
+        },
+        {
+          "name": "productType",
+          "type": "String",
+          "info": "Filter by product type.",
+          "required": false
+        },
+        {
+          "name": "collectionId",
+          "type": "Number",
+          "info": "Filter by collection id.",
+          "required": false
+        },
+        {
+          "name": "createdAtMin",
+          "type": "String",
+          "info": "Show products created after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "createdAtMax",
+          "type": "String",
+          "info": "Show products created before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Show products last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Show products last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMin",
+          "type": "String",
+          "info": "Show products published after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMax",
+          "type": "String",
+          "info": "Show products published before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedStatus",
+          "type": "String",
+          "info": "published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getProductsCount",
+      "description": "Get a count of all products of a given collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "vendor",
+          "type": "String",
+          "info": "Filter by product vendor.",
+          "required": false
+        },
+        {
+          "name": "productType",
+          "type": "String",
+          "info": "Filter by product type.",
+          "required": false
+        },
+        {
+          "name": "collectionId",
+          "type": "Number",
+          "info": "Filter by collection id.",
+          "required": false
+        },
+        {
+          "name": "createdAtMin",
+          "type": "String",
+          "info": "Show products created after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "createdAtMax",
+          "type": "String",
+          "info": "Show products created before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Show products last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Show products last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMin",
+          "type": "String",
+          "info": "Show products published after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMax",
+          "type": "String",
+          "info": "Show products published before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedStatus",
+          "type": "String",
+          "info": "published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleProduct",
+      "description": "Get a single product.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createProduct",
+      "description": "Create a new product.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "The name of the product. In a shop's catalog, clicking on a product's title takes you to that product's page. On a product's page, the product's title typically appears in a large font.",
+          "required": true
+        },
+        {
+          "name": "bodyHtml",
+          "type": "String",
+          "info": "The description of the product, complete with HTML formatting.",
+          "required": false
+        },
+        {
+          "name": "productType",
+          "type": "String",
+          "info": "A categorization that a product can be tagged with, commonly used for filtering and searching.",
+          "required": false
+        },
+        {
+          "name": "imageSrc",
+          "type": "File",
+          "info": "Image associated with the product.",
+          "required": false
+        },
+        {
+          "name": "vendor",
+          "type": "String",
+          "info": "The name of the vendor of the product.",
+          "required": false
+        },
+        {
+          "name": "variants",
+          "type": "Array",
+          "info": "Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant..",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.",
+          "required": false
+        },
+        {
+          "name": "published",
+          "type": "Boolean",
+          "info": "Is published product.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateProduct",
+      "description": "Update a product and associated variants and images.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "The name of the product. In a shop's catalog, clicking on a product's title takes you to that product's page. On a product's page, the product's title typically appears in a large font.",
+          "required": false
+        },
+        {
+          "name": "bodyHtml",
+          "type": "String",
+          "info": "The description of the product, complete with HTML formatting.",
+          "required": false
+        },
+        {
+          "name": "productType",
+          "type": "String",
+          "info": "A categorization that a product can be tagged with, commonly used for filtering and searching.",
+          "required": false
+        },
+        {
+          "name": "vendor",
+          "type": "String",
+          "info": "The name of the vendor of the product.",
+          "required": false
+        },
+        {
+          "name": "variants",
+          "type": "Array",
+          "info": "Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant..",
+          "required": false
+        },
+        {
+          "name": "tags",
+          "type": "String",
+          "info": "A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.",
+          "required": false
+        },
+        {
+          "name": "published",
+          "type": "Boolean",
+          "info": "Is published product.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteProduct",
+      "description": "Remove a product from the shop.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getProductImages",
+      "description": "Get all product images.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getProductImagesCount",
+      "description": "Get a count of all product images.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "createdAtMin",
+          "type": "String",
+          "info": "Count articles created after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "createdAtMax",
+          "type": "String",
+          "info": "Count articles created before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Count articles last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Count articles last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMin",
+          "type": "String",
+          "info": "Count articles published after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMax",
+          "type": "String",
+          "info": "Count articles published before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleProductImage",
+      "description": "Get a single product image by id.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "imageId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the product image.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "Comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createProductImage",
+      "description": "Create a new product image.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "imageSrc",
+          "type": "File",
+          "info": "Specifies the location of the product image.",
+          "required": true
+        },
+        {
+          "name": "filename",
+          "type": "String",
+          "info": "Custom image file name.",
+          "required": false
+        },
+        {
+          "name": "position",
+          "type": "String",
+          "info": "The order of the product image in the list. The first product image is at position 1 and is the 'main' image for the product.",
+          "required": false
+        },
+        {
+          "name": "metafieldsKey",
+          "type": "String",
+          "info": "Identifier for the metafield (maximum of 30 characters).",
+          "required": false
+        },
+        {
+          "name": "metafieldsValue",
+          "type": "String",
+          "info": "Information to be stored as metadata.",
+          "required": false
+        },
+        {
+          "name": "metafieldsValueType",
+          "type": "String",
+          "info": "States whether the information in the value is stored as a 'string' or 'integer'.",
+          "required": false
+        },
+        {
+          "name": "metafieldsNamespace",
+          "type": "String",
+          "info": "Container for a set of metadata. Namespaces help distinguish between metadata you created against metadata created by another individual with a similar namespace (maximum of 20 characters).",
+          "required": false
+        },
+        {
+          "name": "variantIds",
+          "type": "String",
+          "info": "comma-separated list of variant ids associated with the image.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateProductImage",
+      "description": "Modify an existing product image.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "imageId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the product image.",
+          "required": true
+        },
+        {
+          "name": "position",
+          "type": "String",
+          "info": "The order of the product image in the list. The first product image is at position 1 and is the 'main' image for the product.",
+          "required": false
+        },
+        {
+          "name": "metafieldsKey",
+          "type": "String",
+          "info": "Identifier for the metafield (maximum of 30 characters).",
+          "required": false
+        },
+        {
+          "name": "metafieldsValue",
+          "type": "String",
+          "info": "Information to be stored as metadata.",
+          "required": false
+        },
+        {
+          "name": "metafieldsValueType",
+          "type": "String",
+          "info": "States whether the information in the value is stored as a 'string' or 'integer'.",
+          "required": false
+        },
+        {
+          "name": "metafieldsNamespace",
+          "type": "String",
+          "info": "Container for a set of metadata. Namespaces help distinguish between metadata you created against metadata created by another individual with a similar namespace (maximum of 20 characters).",
+          "required": false
+        },
+        {
+          "name": "variantIds",
+          "type": "String",
+          "info": "comma-separated list of variant ids associated with the image.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteProductImage",
+      "description": "Delete a product image.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "imageId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the product image.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getProductVariants",
+      "description": "Get a list of product variants.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getProductVariantsCount",
+      "description": "Get a count of product variants.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleProductVariant",
+      "description": "Get a single product variant by id.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "variantId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product variant.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createProductVariant",
+      "description": "Create a new product variant.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "variant",
+          "type": "JSON",
+          "info": "JSON Object with pair key - value for variant, format { \"option1\": \"Yellow\", \"price\": \"1.00\" }.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateProductVariant",
+      "description": "Update an existing product variant.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "variantId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product variant.",
+          "required": true
+        },
+        {
+          "name": "variant",
+          "type": "JSON",
+          "info": "JSON Object with pair key - value for variant, format { \"option1\": \"Yellow\", \"price\": \"1.00\" }.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteProductVariant",
+      "description": "Delete a product variant.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product.",
+          "required": true
+        },
+        {
+          "name": "variantId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the product variant.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getOrderRefunds",
+      "description": "Retrieve a list of Refunds for an Order.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getOrderSingleRefund",
+      "description": "Retrieve a specific refund.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        },
+        {
+          "name": "refundId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "calculateRefund",
+      "description": "Calculate refund transactions based on line items and shipping. The returned response can be used to create a Refund. Note that returned transactions are of the kind \"suggested_refund\", which must to be changed to \"refund\" in order for them to be accepted.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        },
+        {
+          "name": "shippingFullRefund",
+          "type": "Boolean",
+          "info": "Boolean, set to true to refund all remaining shipping.",
+          "required": false
+        },
+        {
+          "name": "shippingAmount",
+          "type": "String",
+          "info": "Set specific amount of shipping to refund. Takes precedence over full_refund.",
+          "required": false
+        },
+        {
+          "name": "refundLineItems",
+          "type": "Array",
+          "info": "Array of JSON objects, of line item IDs and quantities to refund, format [{\"line_item_id\": 518995019, \"quantity\": 1},{\"line_item_id\": 518995020, \"quantity\": 1}].",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createOrderRefund",
+      "description": "Create a Refund for an existing Order. It is highly suggested that you use the calculate endpoint to produce the transactions to submit.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        },
+        {
+          "name": "restock",
+          "type": "Boolean",
+          "info": "Boolean, whether or not to add the line items back to the store inventory.",
+          "required": false
+        },
+        {
+          "name": "notify",
+          "type": "Boolean",
+          "info": "Boolean, set to true to send a refund notification to the customer.",
+          "required": false
+        },
+        {
+          "name": "note",
+          "type": "String",
+          "info": "An optional comment attached to a refund.",
+          "required": false
+        },
+        {
+          "name": "discrepancyReason",
+          "type": "String",
+          "info": "An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).",
+          "required": false
+        },
+        {
+          "name": "shippingFullRefund",
+          "type": "Boolean",
+          "info": "Boolean, set to true to refund all remaining shipping.",
+          "required": false
+        },
+        {
+          "name": "shippingAmount",
+          "type": "String",
+          "info": "Set specific amount of shipping to refund. Takes precedence over full_refund.",
+          "required": false
+        },
+        {
+          "name": "refundLineItems",
+          "type": "Array",
+          "info": "Array of JSON objects. Array of line item IDs and quantities to refund, format [{\"line_item_id\": 518995019, \"quantity\": 1},{\"line_item_id\": 518995020, \"quantity\": 1}].",
+          "required": false
+        },
+        {
+          "name": "transactions",
+          "type": "Array",
+          "info": "Array of JSON objects. Array of transactions to process as refunds, format [{\"parent_id\": 801038806,\"amount\": 199.65,\"kind\": \"refund\",\"gateway\": \"bogus\"}].",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleShop",
+      "description": "Get the configuration of the shop account.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getTransactions",
+      "description": "Get the Representation of all money transfers.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getTransactionsCount",
+      "description": "Count all a given order’s money transfers.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleTransaction",
+      "description": "Get the Representation of a specific transaction.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        },
+        {
+          "name": "transactionId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the transaction.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createTransaction",
+      "description": "Capture a previously authorized order.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        },
+        {
+          "name": "kind",
+          "type": "String",
+          "info": "The kind of transaction: authorization - Money that the customer has agreed to pay. Authorization period lasts for up to 7 to 30 days (depending on your payment service) while a store awaits for a customer's capture. capture - Transfer of money that was reserved during the authorization of a shop. sale - The combination of authorization and capture, performed in one single step. void - The cancellation of a pending authorization or capture. refund - The partial or full return of the captured money to the customer.",
+          "required": true
+        },
+        {
+          "name": "amount",
+          "type": "String",
+          "info": "The amount of money that the transaction was for.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createUsageCharge",
+      "description": "Create a new charge.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "applicationChargeId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the application charge.",
+          "required": true
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "info": "The name of the usage charge.",
+          "required": false
+        },
+        {
+          "name": "price",
+          "type": "String",
+          "info": "The price of the usage charge.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleUsageCharge",
+      "description": "Retrieve a single charge.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "applicationChargeId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the application charge.",
+          "required": true
+        },
+        {
+          "name": "chargeId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the usage charge.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getUsageCharges",
+      "description": "All past and present usage charges requests are retrieved by this request.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "applicationChargeId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the application charge.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSmartCollections",
+      "description": "Get a list of all smart collections that contain a given product.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "limit",
+          "type": "Number",
+          "info": "Amount of results (default: 50) (maximum: 250).",
+          "required": false
+        },
+        {
+          "name": "page",
+          "type": "Number",
+          "info": "Page to show (default: 1).",
+          "required": false
+        },
+        {
+          "name": "ids",
+          "type": "String",
+          "info": "A comma-separated list of collection ids.",
+          "required": false
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID.",
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Show smart collections with given title.",
+          "required": false
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "Show smart collections that includes given product.",
+          "required": false
+        },
+        {
+          "name": "handle",
+          "type": "String",
+          "info": "Filter by smart collection handle.",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Show smart collections last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Show smart collections last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMin",
+          "type": "String",
+          "info": "Show smart collections published after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMax",
+          "type": "String",
+          "info": "Show smart collections published before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedStatus",
+          "type": "String",
+          "info": "published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSmartCollectionsCount",
+      "description": "Get a count of all smart collections that contain a given product.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "Show smart collections with given title.",
+          "required": false
+        },
+        {
+          "name": "productId",
+          "type": "Number",
+          "info": "Show smart collections that includes given product.",
+          "required": false
+        },
+        {
+          "name": "updatedAtMin",
+          "type": "String",
+          "info": "Show smart collections last updated after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "updatedAtMax",
+          "type": "String",
+          "info": "Show smart collections last updated before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMin",
+          "type": "String",
+          "info": "Show smart collections published after date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedAtMax",
+          "type": "String",
+          "info": "Show smart collections published before date (format: 2014-04-25T16:15:47-04:00).",
+          "required": false
+        },
+        {
+          "name": "publishedStatus",
+          "type": "String",
+          "info": "published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleSmartCollection",
+      "description": "Get a single smart collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "smartCollectionId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the smart collection.",
+          "required": true
+        },
+        {
+          "name": "fields",
+          "type": "String",
+          "info": "comma-separated list of fields to include in the response.",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createSmartCollection",
+      "description": "Create a new smart collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "The name of the smart collection. Limit of 255 characters.",
+          "required": true
+        },
+        {
+          "name": "bodyHtml",
+          "type": "String",
+          "info": "The description of the smart collection, complete with HTML markup. Many templates display this on their smart collection page.",
+          "required": false
+        },
+        {
+          "name": "imageSrc",
+          "type": "File",
+          "info": "The collection image.",
+          "required": false
+        },
+        {
+          "name": "published",
+          "type": "Boolean",
+          "info": "Is published collection.",
+          "required": false
+        },
+        {
+          "name": "rules",
+          "type": "Array",
+          "info": "Array of JSON objects. The list of rules that define what products go into the smart collection, format [{\"column\": \"variant_price\", \"relation\": \"less_than\", \"condition\": \"20\"}].",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateSmartCollection",
+      "description": "Update an existing smart collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "smartCollectionId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the smart collection.",
+          "required": true
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "info": "The name of the smart collection. Limit of 255 characters.",
+          "required": false
+        },
+        {
+          "name": "bodyHtml",
+          "type": "String",
+          "info": "The description of the smart collection, complete with HTML markup. Many templates display this on their smart collection page.",
+          "required": false
+        },
+        {
+          "name": "imageSrc",
+          "type": "File",
+          "info": "The collection image.",
+          "required": false
+        },
+        {
+          "name": "published",
+          "type": "Boolean",
+          "info": "Is published collection.",
+          "required": false
+        },
+        {
+          "name": "rules",
+          "type": "Array",
+          "info": "Array of JSON objects. The list of rules that define what products go into the smart collection, format [{\"column\": \"variant_price\", \"relation\": \"less_than\", \"condition\": \"20\"}].",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "updateProductsInSmartCollection",
+      "description": "Change the manual ordering of products in the SmartCollection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "smartCollectionId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the smart collection.",
+          "required": true
+        },
+        {
+          "name": "products",
+          "type": "Array",
+          "info": "Array of product ids in the order you want them arranged. (Applies only when sort_order is set to \"manual\"), format [921728736, 632910392].",
+          "required": false
+        },
+        {
+          "name": "sortOrder",
+          "type": "String",
+          "info": "The type of sorting to apply. Valid values are listed in the Properties section above. (default: (current value)).",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "deleteSmartCollection",
+      "description": "Remove Smart iPods smart collection.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "credentials",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "smartCollectionId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the smart collection.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    }
+  ]
+}
