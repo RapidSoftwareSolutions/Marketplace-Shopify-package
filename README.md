@@ -67,14 +67,13 @@ Create a new Checkout.
 | lineItemsVariantId| Number     | The id of the product variant.
 | lineItemsQuantity | Number     | The number of products that were purchased.
 
-## Shopify.getSingleCheckout
-Get a single Checkout.
+## Shopify.getCheckouts
+Retreive a list of Checkout.
 
 | Field      | Type       | Description
 |------------|------------|----------
 | shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
-| token      | String     | Unique identifier for a particular checkout.
 
 ## Shopify.updateCheckout
 Modify an existing Checkout.

@@ -299,8 +299,8 @@ return array (
     ),
     4 => 
     array (
-      'name' => 'getSingleCheckout',
-      'description' => 'Get a single Checkout.',
+      'name' => 'getCheckouts',
+      'description' => 'Retreive a list of Checkout.',
       'args' => 
       array (
         0 => 
@@ -511,13 +511,6 @@ return array (
           'name' => 'accessToken',
           'type' => 'String',
           'info' => 'API access token that can be used to access the shop’s data as long as the client is installed.',
-          'required' => true,
-        ),
-        2 => 
-        array (
-          'name' => 'token',
-          'type' => 'String',
-          'info' => 'Unique identifier for a particular checkout.',
           'required' => true,
         ),
       ),
@@ -4844,15 +4837,14 @@ return array (
       'wrap' => 'checkout',
       'custom' => true,
     ),
-    'getSingleCheckout' => 
+    'getCheckouts' =>
     array (
       'dictionary' => 
       array (
         'shopName' => 'shopName',
         'accessToken' => 'accessToken',
-        'token' => 'token',
       ),
-      'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/checkouts/{{token}}.json',
+      'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/checkouts.json',
       'method' => 'GET',
       'wrap' => '',
     ),

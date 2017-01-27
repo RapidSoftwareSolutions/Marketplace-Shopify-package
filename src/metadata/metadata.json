@@ -241,8 +241,8 @@
       ]
     },
     {
-      "name": "getSingleCheckout",
-      "description": "Get a single Checkout.",
+      "name": "getCheckouts",
+      "description": "Retreive a list of Checkout.",
       "args": [
         {
           "name": "shopName",
@@ -254,12 +254,6 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
-        },
-        {
-          "name": "token",
-          "type": "String",
-          "info": "Unique identifier for a particular checkout.",
           "required": true
         }
       ],
