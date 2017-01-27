@@ -1,7 +1,7 @@
 # Shopify Package
 Shopify is platform for ecommerce.
 * Domain: shopify.com
-* Credentials: shopName, clientId, clientSecret, code
+* Credentials: clientId, clientSecret, code
 
 ## How to get credentials: 
 0. Sign up in Shopify as [developer](https://developers.shopify.com/).
