@@ -132,7 +132,7 @@ return array (
         array (
           'name' => 'status',
           'type' => 'String',
-          'info' => 'open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.',
+          'info' => 'Takes: open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.',
           'required' => false,
         ),
       ),
@@ -223,7 +223,7 @@ return array (
         array (
           'name' => 'status',
           'type' => 'String',
-          'info' => 'open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.',
+          'info' => 'Takes: open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.',
           'required' => false,
         ),
       ),
@@ -1133,14 +1133,14 @@ return array (
         array (
           'name' => 'publishedStatus',
           'type' => 'String',
-          'info' => 'published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).',
+          'info' => 'Takes: published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).',
           'required' => false,
         ),
         14 => 
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -1224,7 +1224,7 @@ return array (
         array (
           'name' => 'publishedStatus',
           'type' => 'String',
-          'info' => 'published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).',
+          'info' => 'Takes: published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).',
           'required' => false,
         ),
       ),
@@ -1553,7 +1553,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -1623,7 +1623,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -2099,7 +2099,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -2169,7 +2169,7 @@ return array (
     34 => 
     array (
       'name' => 'getEventByType',
-      'description' => '.',
+      'description' => 'Get all the events from a particular type.',
       'args' => 
       array (
         0 => 
@@ -2253,7 +2253,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -2274,7 +2274,7 @@ return array (
     35 => 
     array (
       'name' => 'getEventsCount',
-      'description' => '.',
+      'description' => 'Count the number of events.',
       'args' => 
       array (
         0 => 
@@ -2449,14 +2449,14 @@ return array (
         array (
           'name' => 'publishedStatus',
           'type' => 'String',
-          'info' => 'published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).',
+          'info' => 'Takes: published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).',
           'required' => false,
         ),
         18 => 
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -2561,7 +2561,7 @@ return array (
         array (
           'name' => 'publishedStatus',
           'type' => 'String',
-          'info' => 'published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).',
+          'info' => 'Takes: published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).',
           'required' => false,
         ),
       ),
@@ -2890,7 +2890,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -3135,7 +3135,7 @@ return array (
         array (
           'name' => 'variantIds',
           'type' => 'String',
-          'info' => 'comma-separated list of variant ids associated with the image.',
+          'info' => 'Comma-separated list of variant ids associated with the image.',
           'required' => false,
         ),
       ),
@@ -3226,7 +3226,7 @@ return array (
         array (
           'name' => 'variantIds',
           'type' => 'String',
-          'info' => 'comma-separated list of variant ids associated with the image.',
+          'info' => 'Comma-separated list of variant ids associated with the image.',
           'required' => false,
         ),
       ),
@@ -3345,7 +3345,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -3625,7 +3625,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -3681,7 +3681,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -3884,7 +3884,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -3940,7 +3940,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -4038,7 +4038,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -4206,7 +4206,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -4255,7 +4255,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -4374,14 +4374,14 @@ return array (
         array (
           'name' => 'publishedStatus',
           'type' => 'String',
-          'info' => 'published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).',
+          'info' => 'Takes: published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).',
           'required' => false,
         ),
         14 => 
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),
@@ -4465,7 +4465,7 @@ return array (
         array (
           'name' => 'publishedStatus',
           'type' => 'String',
-          'info' => 'published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).',
+          'info' => 'Takes: published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).',
           'required' => false,
         ),
       ),
@@ -4514,7 +4514,7 @@ return array (
         array (
           'name' => 'fields',
           'type' => 'String',
-          'info' => 'comma-separated list of fields to include in the response.',
+          'info' => 'Comma-separated list of fields to include in the response.',
           'required' => false,
         ),
       ),

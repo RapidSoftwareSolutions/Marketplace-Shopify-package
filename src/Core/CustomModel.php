@@ -112,7 +112,6 @@ class CustomModel
         }
         if(strlen($urlPart)>0) $urlPart = $urlPart . '/';
         $vendorUrl = str_replace('[[objectTypeId]]', $urlPart, $vendorUrl);
-        var_dump($vendorUrl);
 
         return json_encode($param);
     }
