@@ -10,7 +10,7 @@
   "accounts": {
     "domain": "shopify.com",
     "credentials": [
-      "shopName", "clientId", "clientSecret", "code"
+      "clientId", "clientSecret", "code"
     ]
   },
   "blocks": [
@@ -18,12 +18,6 @@
       "name": "getAccessToken",
       "description": "Get access token from code provided in the redirect described.",
       "args": [
-        {
-          "name": "shopName",
-          "type": "credentials",
-          "info": "Domain of your shop.",
-          "required": true
-        },
         {
           "name": "clientId",
           "type": "credentials",
@@ -40,6 +34,12 @@
           "name": "code",
           "type": "credentials",
           "info": "The authorization code provided in the redirect described.",
+          "required": true
+        },
+        {
+          "name": "shopName",
+          "type": "String",
+          "info": "Domain of your shop.",
           "required": true
         }
       ],
@@ -60,7 +60,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -124,7 +124,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -200,7 +200,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -246,7 +246,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -280,7 +280,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -374,7 +374,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -408,7 +408,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -442,7 +442,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -506,7 +506,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -540,7 +540,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -574,7 +574,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -638,7 +638,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -678,7 +678,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -712,7 +712,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -770,7 +770,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -810,7 +810,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -850,7 +850,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -956,7 +956,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1027,7 +1027,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1067,7 +1067,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1091,7 +1091,7 @@
         },
         {
           "name": "collectsProductId",
-          "type": "Numder",
+          "type": "Number",
           "info": "The unique numeric identifier for the product.",
           "required": false
         },
@@ -1119,7 +1119,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1155,7 +1155,7 @@
         },
         {
           "name": "collectsProductId",
-          "type": "Numder",
+          "type": "Number",
           "info": "The unique numeric identifier for the product.",
           "required": false
         },
@@ -1183,7 +1183,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1217,7 +1217,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1299,7 +1299,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1357,7 +1357,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1397,7 +1397,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1467,7 +1467,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1531,7 +1531,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1565,7 +1565,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1600,7 +1600,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1628,7 +1628,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1662,7 +1662,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1750,7 +1750,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1790,7 +1790,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1878,7 +1878,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -1918,7 +1918,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2048,7 +2048,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2136,7 +2136,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2176,7 +2176,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2252,7 +2252,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2328,7 +2328,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2362,7 +2362,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2408,7 +2408,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2484,7 +2484,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2530,7 +2530,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2612,7 +2612,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2688,7 +2688,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2728,7 +2728,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2786,7 +2786,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2820,7 +2820,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2854,7 +2854,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2894,7 +2894,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2934,7 +2934,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -2974,7 +2974,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3014,7 +3014,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3060,7 +3060,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3112,7 +3112,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3194,7 +3194,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3228,7 +3228,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3274,7 +3274,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3308,7 +3308,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3354,7 +3354,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3400,7 +3400,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3446,7 +3446,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3492,7 +3492,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3532,7 +3532,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3638,7 +3638,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3708,7 +3708,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3748,7 +3748,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3806,7 +3806,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3870,7 +3870,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },
@@ -3916,7 +3916,7 @@
       "args": [
         {
           "name": "shopName",
-          "type": "credentials",
+          "type": "String",
           "info": "Domain of your shop.",
           "required": true
         },

@@ -21,17 +21,17 @@ Get access token from code provided in the redirect described.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
 | clientId    | credentials| The API Key for the app.
 | clientSecret| credentials| The Shared Secret for the app (Credential sets).
 | code        | credentials| The authorization code provided in the redirect described.
+| shopName    | String     | Domain of your shop.
 
 ## Shopify.getAbandonedCheckoutsCount
 Get a count of checkouts.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | sinceId     | Number     | Restrict results to after the specified ID.
 | createdAtMin| String     | Show checkouts created after date (format: 2014-04-25T16:15:47-04:00).
@@ -45,7 +45,7 @@ List all abandoned checkouts.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | limit       | Number     | Amount of results (default: 50) (maximum: 250).
 | page        | Number     | Page to show (default: 1).
@@ -61,7 +61,7 @@ Create a new Checkout.
 
 | Field             | Type       | Description
 |-------------------|------------|----------
-| shopName          | credentials| Domain of your shop.
+| shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | email             | String     | The customer's email address.
 | lineItemsVariantId| Number     | The id of the product variant.
@@ -72,7 +72,7 @@ Get a single Checkout.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | token      | String     | Unique identifier for a particular checkout.
 
@@ -81,7 +81,7 @@ Modify an existing Checkout.
 
 | Field                      | Type       | Description
 |----------------------------|------------|----------
-| shopName                   | credentials| Domain of your shop.
+| shopName                   | String     | Domain of your shop.
 | accessToken                | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | token                      | String     | Unique identifier for a particular checkout.
 | email                      | String     | The customer's email address.
@@ -100,7 +100,7 @@ Get a list of available shipping rates for the specified checkout. Implementers 
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | token      | String     | Unique identifier for a particular checkout.
 
@@ -109,7 +109,7 @@ Retreive a list of Payments on a particular Checkout.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | token      | String     | Unique identifier for a particular checkout.
 
@@ -118,7 +118,7 @@ Create a new payment.
 
 | Field                       | Type       | Description
 |-----------------------------|------------|----------
-| shopName                    | credentials| Domain of your shop.
+| shopName                    | String     | Domain of your shop.
 | accessToken                 | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | token                       | String     | Unique identifier for a particular checkout.
 | requestDetailsIpAddress     | String     | The IP address of the customer.
@@ -132,7 +132,7 @@ Get a single Checkout.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | token      | String     | Unique identifier for a particular checkout.
 
@@ -141,7 +141,7 @@ Count the number of Payments attempted on a Checkout.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | token      | String     | Unique identifier for a particular checkout.
 
@@ -150,7 +150,7 @@ Create a payment session.
 
 | Field                      | Type       | Description
 |----------------------------|------------|----------
-| shopName                   | credentials| Domain of your shop.
+| shopName                   | String     | Domain of your shop.
 | accessToken                | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | creditCardNumber           | String     | Credit card number.
 | creditCardFirstName        | String     | Credit card owner first name.
@@ -164,7 +164,7 @@ Add a product to a collection.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId   | Number     | The unique numeric identifier for the product.
 | collectionId| Number     | The id of the custom collection containing the product.
@@ -174,7 +174,7 @@ Remove a product from a collection.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | collectId  | Number     | A unique numeric identifier for the collect.
 
@@ -183,7 +183,7 @@ List all collects or only those for specific products or collections.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId   | Number     | The unique numeric identifier for the product.
 | collectionId| Number     | The id of the custom collection containing the product.
@@ -196,7 +196,7 @@ Get a count of all collects or only those for specific products or collections.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId   | Number     | The unique numeric identifier for the product.
 | collectionId| Number     | The id of the custom collection containing the product.
@@ -206,7 +206,7 @@ Get the collect with a certain id, or for a given product AND collection.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | collectionId| Number     | The id of the custom collection containing the product.
 | fields      | String     | Comma-separated list of fields to include in the response.
@@ -216,7 +216,7 @@ Get a list of all custom collections that contain a given product.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| shopName       | credentials| Domain of your shop.
+| shopName       | String     | Domain of your shop.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | limit          | Number     | Amount of results (default: 50) (maximum: 250).
 | page           | Number     | Page to show (default: 1).
@@ -237,7 +237,7 @@ Get a count of all custom collections that contain a given product.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| shopName       | credentials| Domain of your shop.
+| shopName       | String     | Domain of your shop.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | title          | String     | Count custom collections with given title.
 | productId      | Number     | Count custom collections that includes given product.
@@ -252,7 +252,7 @@ Get a single custom collection.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | collectionId| Number     | The id of the custom collection containing the product.
 | fields      | String     | Comma-separated list of fields to include in the response.
@@ -262,11 +262,11 @@ Create a new custom collection.
 
 | Field            | Type       | Description
 |------------------|------------|----------
-| shopName         | credentials| Domain of your shop.
+| shopName         | String     | Domain of your shop.
 | accessToken      | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | title            | String     | Collections title.
 | imageSrc         | File       | Image associated with the custom collection.
-| collectsProductId| Numder     | The unique numeric identifier for the product.
+| collectsProductId| Number     | The unique numeric identifier for the product.
 | published        | Boolean    | Is published collection.
 
 ## Shopify.updateCustomCollection
@@ -274,13 +274,13 @@ Update an existing custom collection.
 
 | Field            | Type       | Description
 |------------------|------------|----------
-| shopName         | credentials| Domain of your shop.
+| shopName         | String     | Domain of your shop.
 | accessToken      | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | collectionId     | Number     | The id of the custom collection containing the product.
 | handle           | String     | A human-friendly unique string for the custom collection automatically generated from its title. This is used in shop themes by the Liquid templating language to refer to the custom collection. Limit of 255 characters.
 | title            | String     | Collections title.
 | imageSrc         | File       | Image associated with the custom collection.
-| collectsProductId| Numder     | The unique numeric identifier for the product.
+| collectsProductId| Number     | The unique numeric identifier for the product.
 | published        | Boolean    | Is published collections.
 
 ## Shopify.deleteCustomCollection
@@ -288,7 +288,7 @@ Remove custom collection.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | collectionId| Number     | The id of the custom collection containing the product.
 
@@ -297,7 +297,7 @@ Retrieve all customers of a shop.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | ids         | String     | A comma-separated list of customer ids.
 | sinceId     | Number     | Restrict results to after the specified ID.
@@ -314,7 +314,7 @@ Search customers.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | order      | String     | Field and direction to order results by (default: last_order_date DESC).
 | query      | String     | Text to search customers.
@@ -327,7 +327,7 @@ Get a single customer.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | customerId | String     | The id of the customer.
 | fields     | String     | Comma-separated list of fields to include in the response.
@@ -337,7 +337,7 @@ Create a new customer.
 
 | Field           | Type       | Description
 |-----------------|------------|----------
-| shopName        | credentials| Domain of your shop.
+| shopName        | String     | Domain of your shop.
 | accessToken     | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | firstName       | String     | The customer's first name.
 | lastName        | String     | The customer's last name.
@@ -352,7 +352,7 @@ Update a customer.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | customerId | String     | The id of the customer.
 | firstName  | String     | The customer's first name.
@@ -366,7 +366,7 @@ This endpoint allows you to generate and retrieve an account activation URL for 
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | customerId | String     | The id of the customer.
 
@@ -375,7 +375,7 @@ Delete a customer. A customer can't be deleted if they have existing orders.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | customerId | String     | The id of the customer.
 
@@ -384,7 +384,7 @@ Get a count of all customers.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 
 ## Shopify.getCustomerOrders
@@ -401,7 +401,7 @@ Get the events from a particular product.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | objectType  | String     | Name type of object of event (products, orders).
 | objectTypeId| String     | Type identifier of object of event.
@@ -419,7 +419,7 @@ The unique numeric identifier for the event.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | eventId    | Number     | The unique numeric identifier for the event.
 | fields     | String     | Comma-separated list of fields to include in the response.
@@ -429,7 +429,7 @@ The unique numeric identifier for the event.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | objectType  | String     | Name type of object of event (products, orders).
 | objectTypeId| String     | The unique numeric identifier of the object.
@@ -447,7 +447,7 @@ The unique numeric identifier for the event.
 
 | Field       | Type       | Description
 |-------------|------------|----------
-| shopName    | credentials| Domain of your shop.
+| shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | createdAtMin| String     | Count events created at or after date and time (format: 2014-04-25T16:15:47-04:00).
 | createdAtMax| String     | Count events created at or before date and time (format: 2014-04-25T16:15:47-04:00).
@@ -457,7 +457,7 @@ Get a list of products.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| shopName       | credentials| Domain of your shop.
+| shopName       | String     | Domain of your shop.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | ids            | String     | A comma-separated list of product ids.
 | limit          | Number     | Amount of results (default: 50) (maximum: 250).
@@ -482,7 +482,7 @@ Get a count of all products of a given collection.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| shopName       | credentials| Domain of your shop.
+| shopName       | String     | Domain of your shop.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | vendor         | String     | Filter by product vendor.
 | productType    | String     | Filter by product type.
@@ -500,7 +500,7 @@ Get a single product.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 | fields     | String     | Comma-separated list of fields to include in the response.
@@ -510,7 +510,7 @@ Create a new product.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | title      | String     | The name of the product. In a shop's catalog, clicking on a product's title takes you to that product's page. On a product's page, the product's title typically appears in a large font.
 | bodyHtml   | String     | The description of the product, complete with HTML formatting.
@@ -542,7 +542,7 @@ Update a product and associated variants and images.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 | title      | String     | The name of the product. In a shop's catalog, clicking on a product's title takes you to that product's page. On a product's page, the product's title typically appears in a large font.
@@ -574,7 +574,7 @@ Remove a product from the shop.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 
@@ -583,7 +583,7 @@ Get all product images.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 | sinceId    | Number     | Restrict results to after the specified ID.
@@ -594,7 +594,7 @@ Get a count of all product images.
 
 | Field         | Type       | Description
 |---------------|------------|----------
-| shopName      | credentials| Domain of your shop.
+| shopName      | String     | Domain of your shop.
 | accessToken   | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId     | Number     | The unique numeric identifier for the product.
 | sinceId       | Number     | Restrict results to after the specified ID.
@@ -610,7 +610,7 @@ Get a single product image by id.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 | imageId    | Number     | A unique numeric identifier for the product image.
@@ -621,7 +621,7 @@ Create a new product image.
 
 | Field              | Type       | Description
 |--------------------|------------|----------
-| shopName           | credentials| Domain of your shop.
+| shopName           | String     | Domain of your shop.
 | accessToken        | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId          | Number     | The unique numeric identifier for the product.
 | imageSrc           | File       | Specifies the location of the product image.
@@ -638,7 +638,7 @@ Modify an existing product image.
 
 | Field              | Type       | Description
 |--------------------|------------|----------
-| shopName           | credentials| Domain of your shop.
+| shopName           | String     | Domain of your shop.
 | accessToken        | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId          | Number     | The unique numeric identifier for the product.
 | imageId            | Number     | A unique numeric identifier for the product image.
@@ -654,7 +654,7 @@ Delete a product image.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 | imageId    | Number     | A unique numeric identifier for the product image.
@@ -664,7 +664,7 @@ Get a list of product variants.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 | limit      | Number     | Amount of results (default: 50) (maximum: 250).
@@ -677,7 +677,7 @@ Get a count of product variants.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 
@@ -686,7 +686,7 @@ Get a single product variant by id.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | variantId  | Number     | The unique numeric identifier for the product variant.
 
@@ -713,7 +713,7 @@ Update an existing product variant.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | variantId  | Number     | The unique numeric identifier for the product variant.
 | variant    | JSON       | JSON Object with pair key - value for variant, format { "option1": "Yellow", "price": "1.00" }.
@@ -731,7 +731,7 @@ Delete a product variant.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 | variantId  | Number     | The unique numeric identifier for the product variant.
@@ -741,7 +741,7 @@ Retrieve a list of Refunds for an Order.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId    | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | fields     | String     | comma-separated list of fields to include in the response.
@@ -751,7 +751,7 @@ Retrieve a specific refund.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId    | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | refundId   | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
@@ -762,7 +762,7 @@ Calculate refund transactions based on line items and shipping. The returned res
 
 | Field             | Type       | Description
 |-------------------|------------|----------
-| shopName          | credentials| Domain of your shop.
+| shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId           | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | shippingFullRefund| Boolean    | Boolean, set to true to refund all remaining shipping.
@@ -788,7 +788,7 @@ Create a Refund for an existing Order. It is highly suggested that you use the c
 
 | Field             | Type       | Description
 |-------------------|------------|----------
-| shopName          | credentials| Domain of your shop.
+| shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId           | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
@@ -831,7 +831,7 @@ Get the configuration of the shop account.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | fields     | String     | comma-separated list of fields to include in the response.
 
@@ -840,7 +840,7 @@ Get the Representation of all money transfers.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId    | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | sinceId    | Number     | Restrict results to after the specified ID.
@@ -851,7 +851,7 @@ Count all a given order’s money transfers.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId    | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 
@@ -860,7 +860,7 @@ Get the Representation of a specific transaction.
 
 | Field        | Type       | Description
 |--------------|------------|----------
-| shopName     | credentials| Domain of your shop.
+| shopName     | String     | Domain of your shop.
 | accessToken  | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId      | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | transactionId| Number     | A unique numeric identifier for the transaction.
@@ -871,7 +871,7 @@ Capture a previously authorized order.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId    | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | kind       | String     | The kind of transaction: authorization - Money that the customer has agreed to pay. Authorization period lasts for up to 7 to 30 days (depending on your payment service) while a store awaits for a customer's capture. capture - Transfer of money that was reserved during the authorization of a shop. sale - The combination of authorization and capture, performed in one single step. void - The cancellation of a pending authorization or capture. refund - The partial or full return of the captured money to the customer.
@@ -882,7 +882,7 @@ Create a new charge.
 
 | Field              | Type       | Description
 |--------------------|------------|----------
-| shopName           | credentials| Domain of your shop.
+| shopName           | String     | Domain of your shop.
 | accessToken        | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | applicationChargeId| Number     | A unique numeric identifier for the application charge.
 | description        | String     | The name of the usage charge.
@@ -893,7 +893,7 @@ Retrieve a single charge.
 
 | Field              | Type       | Description
 |--------------------|------------|----------
-| shopName           | credentials| Domain of your shop.
+| shopName           | String     | Domain of your shop.
 | accessToken        | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | applicationChargeId| Number     | A unique numeric identifier for the application charge.
 | chargeId           | Number     | A unique numeric identifier for the usage charge.
@@ -904,7 +904,7 @@ All past and present usage charges requests are retrieved by this request.
 
 | Field              | Type       | Description
 |--------------------|------------|----------
-| shopName           | credentials| Domain of your shop.
+| shopName           | String     | Domain of your shop.
 | accessToken        | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | applicationChargeId| Number     | A unique numeric identifier for the application charge.
 | fields             | String     | comma-separated list of fields to include in the response.
@@ -914,7 +914,7 @@ Get a list of all smart collections that contain a given product.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| shopName       | credentials| Domain of your shop.
+| shopName       | String     | Domain of your shop.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | limit          | Number     | Amount of results (default: 50) (maximum: 250).
 | page           | Number     | Page to show (default: 1).
@@ -935,7 +935,7 @@ Get a count of all smart collections that contain a given product.
 
 | Field          | Type       | Description
 |----------------|------------|----------
-| shopName       | credentials| Domain of your shop.
+| shopName       | String     | Domain of your shop.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | title          | String     | Show smart collections with given title.
 | productId      | Number     | Show smart collections that includes given product.
@@ -950,7 +950,7 @@ Get a single smart collection.
 
 | Field            | Type       | Description
 |------------------|------------|----------
-| shopName         | credentials| Domain of your shop.
+| shopName         | String     | Domain of your shop.
 | accessToken      | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | smartCollectionId| Number     | The unique numeric identifier for the smart collection.
 | fields           | String     | comma-separated list of fields to include in the response.
@@ -960,7 +960,7 @@ Create a new smart collection.
 
 | Field      | Type       | Description
 |------------|------------|----------
-| shopName   | credentials| Domain of your shop.
+| shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | title      | String     | The name of the smart collection. Limit of 255 characters.
 | bodyHtml   | String     | The description of the smart collection, complete with HTML markup. Many templates display this on their smart collection page.
@@ -984,7 +984,7 @@ Update an existing smart collection.
 
 | Field            | Type       | Description
 |------------------|------------|----------
-| shopName         | credentials| Domain of your shop.
+| shopName         | String     | Domain of your shop.
 | accessToken      | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | smartCollectionId| Number     | The unique numeric identifier for the smart collection.
 | title            | String     | The name of the smart collection. Limit of 255 characters.
@@ -1009,7 +1009,7 @@ Change the manual ordering of products in the SmartCollection.
 
 | Field            | Type       | Description
 |------------------|------------|----------
-| shopName         | credentials| Domain of your shop.
+| shopName         | String     | Domain of your shop.
 | accessToken      | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | smartCollectionId| Number     | The unique numeric identifier for the smart collection.
 | products         | Array      | Array of product ids in the order you want them arranged. (Applies only when sort_order is set to "manual").
@@ -1028,7 +1028,7 @@ Remove Smart iPods smart collection.
 
 | Field            | Type       | Description
 |------------------|------------|----------
-| shopName         | credentials| Domain of your shop.
+| shopName         | String     | Domain of your shop.
 | accessToken      | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | smartCollectionId| Number     | The unique numeric identifier for the smart collection.
 

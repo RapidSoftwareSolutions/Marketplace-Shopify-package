@@ -17,10 +17,9 @@ return array (
     'domain' => 'shopify.com',
     'credentials' => 
     array (
-      0 => 'shopName',
-      1 => 'clientId',
-      2 => 'clientSecret',
-      3 => 'code',
+      0 => 'clientId',
+      1 => 'clientSecret',
+      2 => 'code',
     ),
   ),
   'blocks' => 
@@ -33,31 +32,31 @@ return array (
       array (
         0 => 
         array (
-          'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
-        ),
-        1 => 
-        array (
           'name' => 'clientId',
           'type' => 'credentials',
           'info' => 'The API Key for the app.',
           'required' => true,
         ),
-        2 => 
+        1 => 
         array (
           'name' => 'clientSecret',
           'type' => 'credentials',
           'info' => 'The Shared Secret for the app (Credential sets).',
           'required' => true,
         ),
-        3 => 
+        2 => 
         array (
           'name' => 'code',
           'type' => 'credentials',
           'info' => 'The authorization code provided in the redirect described.',
           'required' => true,
+        ),
+        3 =>
+        array (
+            'name' => 'shopName',
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
       ),
       'callbacks' => 
@@ -83,9 +82,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -160,9 +159,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -251,9 +250,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -307,9 +306,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -349,9 +348,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -461,9 +460,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -503,9 +502,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -545,9 +544,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -622,9 +621,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -664,9 +663,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -706,9 +705,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -783,9 +782,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -832,9 +831,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -874,9 +873,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -944,9 +943,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -993,9 +992,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1042,9 +1041,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1168,9 +1167,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1252,9 +1251,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1301,9 +1300,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1364,9 +1363,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1441,9 +1440,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1483,9 +1482,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1581,9 +1580,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1651,9 +1650,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1700,9 +1699,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1784,9 +1783,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1861,9 +1860,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1903,9 +1902,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1945,9 +1944,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -1980,9 +1979,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2022,9 +2021,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2127,9 +2126,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2176,9 +2175,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2281,9 +2280,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2330,9 +2329,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2484,9 +2483,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2589,9 +2588,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2638,9 +2637,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2729,9 +2728,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2820,9 +2819,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2862,9 +2861,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -2918,9 +2917,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3009,9 +3008,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3065,9 +3064,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3163,9 +3162,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3254,9 +3253,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3303,9 +3302,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3373,9 +3372,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3415,9 +3414,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3457,9 +3456,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3506,9 +3505,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3555,9 +3554,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3604,9 +3603,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3653,9 +3652,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3709,9 +3708,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3772,9 +3771,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3870,9 +3869,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3912,9 +3911,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -3968,9 +3967,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4010,9 +4009,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4066,9 +4065,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4122,9 +4121,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4178,9 +4177,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4234,9 +4233,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4283,9 +4282,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4409,9 +4408,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4493,9 +4492,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4542,9 +4541,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4612,9 +4611,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4689,9 +4688,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
@@ -4745,9 +4744,9 @@ return array (
         0 => 
         array (
           'name' => 'shopName',
-          'type' => 'credentials',
-          'info' => 'Domain of your shop.',
-          'required' => true,
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
         ),
         1 => 
         array (
