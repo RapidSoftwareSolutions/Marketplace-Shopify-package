@@ -2688,7 +2688,7 @@ return array (
         array (
           'name' => 'variants',
           'type' => 'Array',
-          'info' => 'Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as \'small black\', \'medium black\', \'large blue\'), would be a variant..',
+          'info' => 'Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as \'small black\', \'medium black\', \'large blue\'), would be a variant.',
           'required' => false,
         ),
         8 => 
@@ -3479,7 +3479,7 @@ return array (
         array (
           'name' => 'variant',
           'type' => 'JSON',
-          'info' => 'JSON Object with pair key - value for variant, format { "option1": "Yellow", "price": "1.00" }.',
+          'info' => 'JSON Object with pair key - value for variant.',
           'required' => true,
         ),
       ),
@@ -3528,7 +3528,7 @@ return array (
         array (
           'name' => 'variant',
           'type' => 'JSON',
-          'info' => 'JSON Object with pair key - value for variant, format { "option1": "Yellow", "price": "1.00" }.',
+          'info' => 'JSON Object with pair key - value for variant.',
           'required' => true,
         ),
       ),
@@ -3745,7 +3745,7 @@ return array (
         array (
           'name' => 'refundLineItems',
           'type' => 'Array',
-          'info' => 'Array of JSON objects, of line item IDs and quantities to refund, format [{"line_item_id": 518995019, "quantity": 1},{"line_item_id": 518995020, "quantity": 1}].',
+          'info' => 'Array of JSON objects, of line item IDs and quantities to refund.',
           'required' => false,
         ),
       ),
@@ -3836,14 +3836,14 @@ return array (
         array (
           'name' => 'refundLineItems',
           'type' => 'Array',
-          'info' => 'Array of JSON objects. Array of line item IDs and quantities to refund, format [{"line_item_id": 518995019, "quantity": 1},{"line_item_id": 518995020, "quantity": 1}].',
+          'info' => 'Array of JSON objects. Array of line item IDs and quantities to refund.',
           'required' => false,
         ),
         10 => 
         array (
           'name' => 'transactions',
           'type' => 'Array',
-          'info' => 'Array of JSON objects. Array of transactions to process as refunds, format [{"parent_id": 801038806,"amount": 199.65,"kind": "refund","gateway": "bogus"}].',
+          'info' => 'Array of JSON objects. Array of transactions to process as refunds.',
           'required' => false,
         ),
       ),
@@ -4585,7 +4585,7 @@ return array (
         array (
           'name' => 'rules',
           'type' => 'Array',
-          'info' => 'Array of JSON objects. The list of rules that define what products go into the smart collection, format [{"column": "variant_price", "relation": "less_than", "condition": "20"}].',
+          'info' => 'Array of JSON objects. The list of rules that define what products go into the smart collection.',
           'required' => false,
         ),
       ),
@@ -4662,7 +4662,7 @@ return array (
         array (
           'name' => 'rules',
           'type' => 'Array',
-          'info' => 'Array of JSON objects. The list of rules that define what products go into the smart collection, format [{"column": "variant_price", "relation": "less_than", "condition": "20"}].',
+          'info' => 'Array of JSON objects. The list of rules that define what products go into the smart collection.',
           'required' => false,
         ),
       ),
@@ -4711,7 +4711,7 @@ return array (
         array (
           'name' => 'products',
           'type' => 'Array',
-          'info' => 'Array of product ids in the order you want them arranged. (Applies only when sort_order is set to "manual"), format [921728736, 632910392].',
+          'info' => 'Array of product ids in the order you want them arranged. (Applies only when sort_order is set to "manual").',
           'required' => false,
         ),
         4 => 
