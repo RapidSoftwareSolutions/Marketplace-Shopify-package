@@ -317,13 +317,6 @@ return array (
           'info' => 'API access token that can be used to access the shop’s data as long as the client is installed.',
           'required' => true,
         ),
-        2 => 
-        array (
-          'name' => 'token',
-          'type' => 'String',
-          'info' => 'Unique identifier for a particular checkout.',
-          'required' => true,
-        ),
       ),
       'callbacks' => 
       array (
