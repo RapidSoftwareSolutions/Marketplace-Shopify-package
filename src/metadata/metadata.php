@@ -76,7 +76,7 @@ return array (
     1 => 
     array (
       'name' => 'getAbandonedCheckoutsCount',
-      'description' => 'Get a count of checkouts.',
+      'description' => 'Get a count of abandoned checkouts.',
       'args' => 
       array (
         0 => 
@@ -615,7 +615,7 @@ return array (
     9 => 
     array (
       'name' => 'getSinglePayment',
-      'description' => 'Get a single Checkout.',
+      'description' => 'Get a single Payment.',
       'args' => 
       array (
         0 => 
@@ -1005,9 +1005,9 @@ return array (
         ),
         2 => 
         array (
-          'name' => 'collectionId',
+          'name' => 'collectId',
           'type' => 'Number',
-          'info' => 'The id of the custom collection containing the product.',
+          'info' => 'The id of the collect to retrieve.',
           'required' => true,
         ),
         3 => 
@@ -2120,7 +2120,7 @@ return array (
     33 => 
     array (
       'name' => 'getSingleEvent',
-      'description' => 'The unique numeric identifier for the event.',
+      'description' => 'Get a single Event.',
       'args' => 
       array (
         0 => 
@@ -2169,7 +2169,7 @@ return array (
     34 => 
     array (
       'name' => 'getEventByType',
-      'description' => 'Get all the events from a particular type.',
+      'description' => 'Retrieve event by type.',
       'args' => 
       array (
         0 => 
@@ -2274,7 +2274,7 @@ return array (
     35 => 
     array (
       'name' => 'getEventsCount',
-      'description' => 'Count the number of events.',
+      'description' => 'Receive a count of all Events.',
       'args' => 
       array (
         0 => 
@@ -4059,7 +4059,7 @@ return array (
     62 => 
     array (
       'name' => 'createTransaction',
-      'description' => 'Capture a previously authorized order.',
+      'description' => 'Create new transaction.',
       'args' => 
       array (
         0 => 
@@ -4738,7 +4738,7 @@ return array (
     72 => 
     array (
       'name' => 'deleteSmartCollection',
-      'description' => 'Remove Smart iPods smart collection.',
+      'description' => 'Remove SmartCollection from the database.',
       'args' => 
       array (
         0 => 
@@ -5022,10 +5022,10 @@ return array (
       array (
         'shopName' => 'shopName',
         'accessToken' => 'accessToken',
-        'collectionId' => 'collectionId',
+        'collectId' => 'collectId',
         'fields' => 'fields',
       ),
-      'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/collects/{{collectionId}}.json',
+      'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/collects/{{collectId}}.json',
       'method' => 'GET',
       'wrap' => '',
     ),
@@ -5399,8 +5399,8 @@ return array (
         'shopName' => 'shopName',
         'accessToken' => 'accessToken',
         'title' => 'title',
-        'body_html' => 'bodyHtml',
-        'product_type' => 'productType',
+        'bodyHtml' => 'body_html',
+        'productType' => 'product_type',
         'imageSrc' => 'imageSrc',
         'vendor' => 'vendor',
         'variants' => 'variants',

@@ -56,7 +56,7 @@
     },
     {
       "name": "getAbandonedCheckoutsCount",
-      "description": "Get a count of checkouts.",
+      "description": "Get a count of abandoned checkouts.",
       "args": [
         {
           "name": "shopName",
@@ -502,7 +502,7 @@
     },
     {
       "name": "getSinglePayment",
-      "description": "Get a single Checkout.",
+      "description": "Get a single Payment.",
       "args": [
         {
           "name": "shopName",
@@ -821,9 +821,9 @@
           "required": true
         },
         {
-          "name": "collectionId",
+          "name": "collectId",
           "type": "Number",
-          "info": "The id of the custom collection containing the product.",
+          "info": "The id of the collect to retrieve.",
           "required": true
         },
         {
@@ -1746,7 +1746,7 @@
     },
     {
       "name": "getSingleEvent",
-      "description": "The unique numeric identifier for the event.",
+      "description": "Get a single Event.",
       "args": [
         {
           "name": "shopName",
@@ -1786,7 +1786,7 @@
     },
     {
       "name": "getEventByType",
-      "description": "Get all the events from a particular type.",
+      "description": "Retrieve event by type.",
       "args": [
         {
           "name": "shopName",
@@ -1874,7 +1874,7 @@
     },
     {
       "name": "getEventsCount",
-      "description": "Count the number of events.",
+      "description": "Receive a count of all Events.",
       "args": [
         {
           "name": "shopName",
@@ -3350,7 +3350,7 @@
     },
     {
       "name": "createTransaction",
-      "description": "Capture a previously authorized order.",
+      "description": "Create new transaction.",
       "args": [
         {
           "name": "shopName",
@@ -3912,7 +3912,7 @@
     },
     {
       "name": "deleteSmartCollection",
-      "description": "Remove Smart iPods smart collection.",
+      "description": "Remove SmartCollection from the database.",
       "args": [
         {
           "name": "shopName",

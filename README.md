@@ -27,7 +27,7 @@ Get access token from code provided in the redirect described.
 | shopName    | String     | Domain of your shop.
 
 ## Shopify.getAbandonedCheckoutsCount
-Get a count of checkouts.
+Get a count of abandoned checkouts.
 
 | Field       | Type       | Description
 |-------------|------------|----------
@@ -128,7 +128,7 @@ Create a new payment.
 | sessionId                   | String     | Represents the id that was returned by the card vault.
 
 ## Shopify.getSinglePayment
-Get a single Checkout.
+Get a single Payment.
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -204,12 +204,12 @@ Get a count of all collects or only those for specific products or collections.
 ## Shopify.getSingleCollect
 Get the collect with a certain id, or for a given product AND collection.
 
-| Field       | Type       | Description
-|-------------|------------|----------
-| shopName    | String     | Domain of your shop.
-| accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
-| collectionId| Number     | The id of the custom collection containing the product.
-| fields      | String     | Comma-separated list of fields to include in the response.
+| Field      | Type       | Description
+|------------|------------|----------
+| shopName   | String     | Domain of your shop.
+| accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
+| collectId  | Number     | The id of the collect to retrieve.
+| fields     | String     | Comma-separated list of fields to include in the response.
 
 ## Shopify.getCustomCollections
 Get a list of all custom collections that contain a given product.
@@ -415,7 +415,7 @@ Get the events from a particular product.
 | fields      | String     | comma-separated list of fields to include in the response.
 
 ## Shopify.getSingleEvent
-The unique numeric identifier for the event.
+Get a single Event.
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -425,7 +425,7 @@ The unique numeric identifier for the event.
 | fields     | String     | Comma-separated list of fields to include in the response.
 
 ## Shopify.getEventByType
-.
+Retrieve event by type.
 
 | Field       | Type       | Description
 |-------------|------------|----------
@@ -443,7 +443,7 @@ The unique numeric identifier for the event.
 | fields      | String     | comma-separated list of fields to include in the response.
 
 ## Shopify.getEventsCount
-.
+Receive a count of all Events.
 
 | Field       | Type       | Description
 |-------------|------------|----------
@@ -867,7 +867,7 @@ Get the Representation of a specific transaction.
 | fields       | String     | comma-separated list of fields to include in the response.
 
 ## Shopify.createTransaction
-Capture a previously authorized order.
+Create new transaction.
 
 | Field      | Type       | Description
 |------------|------------|----------
@@ -1024,7 +1024,7 @@ Change the manual ordering of products in the SmartCollection.
 ```
 
 ## Shopify.deleteSmartCollection
-Remove Smart iPods smart collection.
+Remove SmartCollection from the database.
 
 | Field            | Type       | Description
 |------------------|------------|----------
