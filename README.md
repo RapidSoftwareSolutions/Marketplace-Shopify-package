@@ -11,8 +11,8 @@ Shopify is platform for ecommerce.
 4. Open it.
 5. In our package we using OAuth authentication, more details about how it work in Shopify you can read [HERE](https://help.shopify.com/api/guides/authentication/oauth).
 6. To get access token, which used in all blocks of package as required field, first of all you need redirect the shop owner to this URL:
-* https://{shop}.myshopify.com/admin/oauth/authorize?client_id={api_key}&scope={scopes}&redirect_uri={redirect_uri}&state={nonce}&grant_options[]={option}
-* About link syntax you can read [HERE](https://help.shopify.com/api/guides/authentication/oauth#asking-for-permission)
+   * https://{shop}.myshopify.com/admin/oauth/authorize?client_id={api_key}&scope={scopes}&redirect_uri={redirect_uri}&state={nonce}&grant_options[]={option}
+   * About link syntax you can read [HERE](https://help.shopify.com/api/guides/authentication/oauth#asking-for-permission)
 7. In redirect link, one of parameter will be "code", which we will use next.
 8. Finally to get access token use "getAccessToken" block in this package.
 9. In it response you get access token.
