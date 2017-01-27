@@ -4,18 +4,16 @@ Shopify is platform for ecommerce.
 * Credentials: shopName, clientId, clientSecret, code
 
 ## How to get credentials: 
-0. Register on Shopify as [developer](https://developers.shopify.com/).
-1. Then go to [App section](https://app.shopify.com/services/partners/api_clients).
-2. Click create a new app, and fill all needed fields.
-3. After that in [App section](https://app.shopify.com/services/partners/api_clients) appear your new app.
-4. Open it.
-5. In our package we using OAuth authentication, more details about how it work in Shopify you can read [HERE](https://help.shopify.com/api/guides/authentication/oauth).
-6. To get access token, which used in all blocks of package as required field, first of all you need redirect the shop owner to this URL:
+0. Sign up in Shopify as [developer](https://developers.shopify.com/).
+1. Navigate to [App section](https://app.shopify.com/services/partners/api_clients).
+2. Click "Create a new app", fill all required fields.
+3. Your app will appear in ["App" section](https://app.shopify.com/services/partners/api_clients). Open it.
+4. In our package we using OAuth authentication, more details about how it work in Shopify you can read [HERE](https://help.shopify.com/api/guides/authentication/oauth).
+5. To get access token, which used in all blocks of package as required field, first of all you need redirect the shop owner to this URL:
    * https://{shop}.myshopify.com/admin/oauth/authorize?client_id={api_key}&scope={scopes}&redirect_uri={redirect_uri}&state={nonce}&grant_options[]={option}
    * About link syntax you can read [HERE](https://help.shopify.com/api/guides/authentication/oauth#asking-for-permission)
-7. In redirect link, one of parameter will be "code", which we will use next.
-8. Finally to get access token use "getAccessToken" block in this package.
-9. In it response you get access token.
+6. In redirect link, one of parameter will be "code", which we will use next.
+7. Finally to get access token use "getAccessToken" block in this package.
 9. That's all. Have fun!
 
 ## Shopify.getAccessToken
