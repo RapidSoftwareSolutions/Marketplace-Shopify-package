@@ -232,7 +232,7 @@ Get a list of all custom collections that contain a given product.
 | fields         | String     | comma-separated list of fields to include in the response.
 
 ## Shopify.getCustomCollectionsCount
-Get a count of all custom collections that contain a given product.
+Get a count of all custom collections.
 
 | Field          | Type       | Description
 |----------------|------------|----------
@@ -743,7 +743,6 @@ Retrieve a list of Refunds for an Order.
 | shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId    | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
-| fields     | String     | comma-separated list of fields to include in the response.
 
 ## Shopify.getOrderSingleRefund
 Retrieve a specific refund.
@@ -754,7 +753,6 @@ Retrieve a specific refund.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId    | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | refundId   | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
-| fields     | String     | comma-separated list of fields to include in the response.
 
 ## Shopify.calculateRefund
 Calculate refund transactions based on line items and shipping. The returned response can be used to create a Refund. Note that returned transactions are of the kind "suggested_refund", which must to be changed to "refund" in order for them to be accepted.
@@ -782,22 +780,37 @@ Calculate refund transactions based on line items and shipping. The returned res
 ]
 ```
 
-## Shopify.createOrderRefund
-Create a Refund for an existing Order. It is highly suggested that you use the calculate endpoint to produce the transactions to submit.
+## Shopify.createOrderRefundByTransaction
+Refund single or several transactions from an existing order.
 
 | Field             | Type       | Description
 |-------------------|------------|----------
 | shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId           | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
+| transactions      | Array      | Array of JSON objects. Array of transactions to process as refunds.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
 | notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
 | note              | String     | An optional comment attached to a refund.
 | discrepancyReason | String     | An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).
 | shippingFullRefund| Boolean    | Boolean, set to true to refund all remaining shipping.
 | shippingAmount    | String     | Set specific amount of shipping to refund. Takes precedence over full_refund.
+
+## Shopify.createOrderRefundByItems
+Refund single or several items from an existing order.
+
+| Field             | Type       | Description
+|-------------------|------------|----------
+| shopName          | String     | Domain of your shop.
+| accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
+| orderId           | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | refundLineItems   | Array      | Array of JSON objects. Array of line item IDs and quantities to refund.
-| transactions      | Array      | Array of JSON objects. Array of transactions to process as refunds.
+| restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
+| notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
+| note              | String     | An optional comment attached to a refund.
+| discrepancyReason | String     | An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).
+| shippingFullRefund| Boolean    | Boolean, set to true to refund all remaining shipping.
+| shippingAmount    | String     | Set specific amount of shipping to refund. Takes precedence over full_refund.
 
 #### refundLineItems format
 ```json
@@ -861,9 +874,9 @@ Get the Representation of a specific transaction.
 |--------------|------------|----------
 | shopName     | String     | Domain of your shop.
 | accessToken  | String     | API access token that can be used to access the shop’s data as long as the client is installed.
-| orderId      | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
+| orderId      | Number     | The unique numeric order identifier. This one is used for API purposes.
 | transactionId| Number     | A unique numeric identifier for the transaction.
-| fields       | String     | comma-separated list of fields to include in the response.
+| fields       | String     | Comma-separated list of fields to include in the response.
 
 ## Shopify.createTransaction
 Create new transaction.

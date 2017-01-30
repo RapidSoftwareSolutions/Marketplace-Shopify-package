@@ -3614,13 +3614,6 @@ return array (
           'info' => 'The unique numeric identifier for the refund. This one is used for API purposes.',
           'required' => true,
         ),
-        3 => 
-        array (
-          'name' => 'fields',
-          'type' => 'String',
-          'info' => 'Comma-separated list of fields to include in the response.',
-          'required' => false,
-        ),
       ),
       'callbacks' => 
       array (
@@ -3669,13 +3662,6 @@ return array (
           'type' => 'Number',
           'info' => 'The unique numeric identifier for the refund. This one is used for API purposes.',
           'required' => true,
-        ),
-        4 => 
-        array (
-          'name' => 'fields',
-          'type' => 'String',
-          'info' => 'Comma-separated list of fields to include in the response.',
-          'required' => false,
         ),
       ),
       'callbacks' => 
@@ -3757,8 +3743,8 @@ return array (
     ),
     57 => 
     array (
-      'name' => 'createOrderRefund',
-      'description' => 'Create a Refund for an existing Order. It is highly suggested that you use the calculate endpoint to produce the transactions to submit.',
+      'name' => 'createOrderRefundByTransaction',
+      'description' => 'Refund single or several transactions from an existing order.',
       'args' => 
       array (
         0 => 
@@ -3782,60 +3768,53 @@ return array (
           'info' => 'The unique numeric identifier for the refund. This one is used for API purposes.',
           'required' => true,
         ),
-        3 => 
+        3 =>
+        array (
+          'name' => 'transactions',
+          'type' => 'Array',
+          'info' => 'Array of JSON objects. Array of transactions to process as refunds.',
+          'required' => true,
+        ),
+        4 =>
         array (
           'name' => 'restock',
           'type' => 'Boolean',
           'info' => 'Boolean, whether or not to add the line items back to the store inventory.',
           'required' => false,
         ),
-        4 => 
+        5 =>
         array (
           'name' => 'notify',
           'type' => 'Boolean',
           'info' => 'Boolean, set to true to send a refund notification to the customer.',
           'required' => false,
         ),
-        5 => 
+        6 =>
         array (
           'name' => 'note',
           'type' => 'String',
           'info' => 'An optional comment attached to a refund.',
           'required' => false,
         ),
-        6 => 
+        7 =>
         array (
           'name' => 'discrepancyReason',
           'type' => 'String',
           'info' => 'An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).',
           'required' => false,
         ),
-        7 => 
+        8 =>
         array (
           'name' => 'shippingFullRefund',
           'type' => 'Boolean',
           'info' => 'Boolean, set to true to refund all remaining shipping.',
           'required' => false,
         ),
-        8 => 
+        9 =>
         array (
           'name' => 'shippingAmount',
           'type' => 'String',
           'info' => 'Set specific amount of shipping to refund. Takes precedence over full_refund.',
-          'required' => false,
-        ),
-        9 => 
-        array (
-          'name' => 'refundLineItems',
-          'type' => 'Array',
-          'info' => 'Array of JSON objects. Array of line item IDs and quantities to refund.',
-          'required' => false,
-        ),
-        10 => 
-        array (
-          'name' => 'transactions',
-          'type' => 'Array',
-          'info' => 'Array of JSON objects. Array of transactions to process as refunds.',
           'required' => false,
         ),
       ),
@@ -3853,7 +3832,98 @@ return array (
         ),
       ),
     ),
-    58 => 
+    58 =>
+    array (
+      'name' => 'createOrderRefundByItems',
+      'description' => 'Description: Refund single or several items from an existing order.',
+      'args' =>
+      array (
+        0 =>
+        array (
+          'name' => 'shopName',
+            'type' => 'String',
+            'info' => 'Domain of your shop.',
+            'required' => true,
+        ),
+        1 =>
+        array (
+          'name' => 'accessToken',
+          'type' => 'String',
+          'info' => 'API access token that can be used to access the shop’s data as long as the client is installed.',
+          'required' => true,
+        ),
+        2 =>
+        array (
+          'name' => 'orderId',
+          'type' => 'Number',
+          'info' => 'The unique numeric identifier for the refund. This one is used for API purposes.',
+          'required' => true,
+        ),
+        3 =>
+        array (
+          'name' => 'refundLineItems',
+          'type' => 'Array',
+          'info' => 'Array of JSON objects. Array of line item IDs and quantities to refund.',
+          'required' => true,
+        ),
+        4 =>
+        array (
+          'name' => 'restock',
+          'type' => 'Boolean',
+          'info' => 'Boolean, whether or not to add the line items back to the store inventory.',
+          'required' => false,
+        ),
+        5 =>
+        array (
+          'name' => 'notify',
+          'type' => 'Boolean',
+          'info' => 'Boolean, set to true to send a refund notification to the customer.',
+          'required' => false,
+        ),
+        6 =>
+        array (
+          'name' => 'note',
+          'type' => 'String',
+          'info' => 'An optional comment attached to a refund.',
+          'required' => false,
+        ),
+        7 =>
+        array (
+          'name' => 'discrepancyReason',
+          'type' => 'String',
+          'info' => 'An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).',
+          'required' => false,
+        ),
+        8 =>
+        array (
+          'name' => 'shippingFullRefund',
+          'type' => 'Boolean',
+          'info' => 'Boolean, set to true to refund all remaining shipping.',
+          'required' => false,
+        ),
+        9 =>
+        array (
+          'name' => 'shippingAmount',
+          'type' => 'String',
+          'info' => 'Set specific amount of shipping to refund. Takes precedence over full_refund.',
+          'required' => false,
+        ),
+      ),
+      'callbacks' =>
+      array (
+        0 =>
+        array (
+          'name' => 'error',
+          'info' => 'Error',
+        ),
+        1 =>
+        array (
+          'name' => 'success',
+          'info' => 'Success',
+        ),
+      ),
+    ),
+    59 =>
     array (
       'name' => 'getSingleShop',
       'description' => 'Get the configuration of the shop account.',
@@ -3895,7 +3965,7 @@ return array (
         ),
       ),
     ),
-    59 => 
+    60 =>
     array (
       'name' => 'getTransactions',
       'description' => 'Get the Representation of all money transfers.',
@@ -3951,7 +4021,7 @@ return array (
         ),
       ),
     ),
-    60 => 
+    61 =>
     array (
       'name' => 'getTransactionsCount',
       'description' => 'Count all a given order’s money transfers.',
@@ -3993,7 +4063,7 @@ return array (
         ),
       ),
     ),
-    61 => 
+    62 =>
     array (
       'name' => 'getSingleTransaction',
       'description' => 'Get the Representation of a specific transaction.',
@@ -4049,7 +4119,7 @@ return array (
         ),
       ),
     ),
-    62 => 
+    63 =>
     array (
       'name' => 'createTransaction',
       'description' => 'Create new transaction.',
@@ -4105,7 +4175,7 @@ return array (
         ),
       ),
     ),
-    63 => 
+    64 =>
     array (
       'name' => 'createUsageCharge',
       'description' => 'Create a new charge.',
@@ -4161,7 +4231,7 @@ return array (
         ),
       ),
     ),
-    64 => 
+    65 =>
     array (
       'name' => 'getSingleUsageCharge',
       'description' => 'Retrieve a single charge.',
@@ -4217,7 +4287,7 @@ return array (
         ),
       ),
     ),
-    65 => 
+    66 =>
     array (
       'name' => 'getUsageCharges',
       'description' => 'All past and present usage charges requests are retrieved by this request.',
@@ -4266,7 +4336,7 @@ return array (
         ),
       ),
     ),
-    66 => 
+    67 =>
     array (
       'name' => 'getSmartCollections',
       'description' => 'Get a list of all smart collections that contain a given product.',
@@ -4392,7 +4462,7 @@ return array (
         ),
       ),
     ),
-    67 => 
+    68 =>
     array (
       'name' => 'getSmartCollectionsCount',
       'description' => 'Get a count of all smart collections that contain a given product.',
@@ -4476,7 +4546,7 @@ return array (
         ),
       ),
     ),
-    68 => 
+    69 =>
     array (
       'name' => 'getSingleSmartCollection',
       'description' => 'Get a single smart collection.',
@@ -4525,7 +4595,7 @@ return array (
         ),
       ),
     ),
-    69 => 
+    70 =>
     array (
       'name' => 'createSmartCollection',
       'description' => 'Create a new smart collection.',
@@ -4595,7 +4665,7 @@ return array (
         ),
       ),
     ),
-    70 => 
+    71 =>
     array (
       'name' => 'updateSmartCollection',
       'description' => 'Update an existing smart collection.',
@@ -4672,7 +4742,7 @@ return array (
         ),
       ),
     ),
-    71 => 
+    72 =>
     array (
       'name' => 'reorderSmartCollectionProducts',
       'description' => 'Change the manual ordering of products in the SmartCollection.',
@@ -4728,7 +4798,7 @@ return array (
         ),
       ),
     ),
-    72 => 
+    73 =>
     array (
       'name' => 'deleteSmartCollection',
       'description' => 'Remove SmartCollection from the database.',
@@ -5624,7 +5694,6 @@ return array (
         'shopName' => 'shopName',
         'accessToken' => 'accessToken',
         'orderId' => 'orderId',
-        'fields' => 'fields',
       ),
       'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/orders/{{orderId}}/refunds.json',
       'method' => 'GET',
@@ -5638,7 +5707,6 @@ return array (
         'accessToken' => 'accessToken',
         'orderId' => 'orderId',
         'refundId' => 'refundId',
-        'fields' => 'fields',
       ),
       'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/orders/{{orderId}}/refunds/{{refundId}}.json',
       'method' => 'GET',
@@ -5660,21 +5728,40 @@ return array (
       'wrap' => 'refund',
       'custom' => true,
     ),
-    'createOrderRefund' => 
+    'createOrderRefundByTransaction' =>
     array (
       'dictionary' => 
       array (
         'shopName' => 'shopName',
         'accessToken' => 'accessToken',
         'orderId' => 'orderId',
+        'transactions' => 'transactions',
         'restock' => 'restock',
         'notify' => 'notify',
         'note' => 'note',
         'discrepancyReason' => 'discrepancy_reason',
         'shippingFullRefund' => 'full_refund',
         'shippingAmount' => 'amount',
+      ),
+      'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/orders/{{orderId}}/refunds.json',
+      'method' => 'POST',
+      'wrap' => 'refund',
+      'custom' => true,
+    ),
+    'createOrderRefundByItems' =>
+    array (
+      'dictionary' =>
+      array (
+        'shopName' => 'shopName',
+        'accessToken' => 'accessToken',
+        'orderId' => 'orderId',
         'refundLineItems' => 'refund_line_items',
-        'transactions' => 'transactions',
+        'restock' => 'restock',
+        'notify' => 'notify',
+        'note' => 'note',
+        'discrepancyReason' => 'discrepancy_reason',
+        'shippingFullRefund' => 'full_refund',
+        'shippingAmount' => 'amount',
       ),
       'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/orders/{{orderId}}/refunds.json',
       'method' => 'POST',

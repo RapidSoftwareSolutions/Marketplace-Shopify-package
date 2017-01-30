@@ -203,7 +203,29 @@ class CustomModel
         return json_encode($result);
     }
 
-    public static function createOrderRefund($param, $blockCustom, $vendorUrl)
+    public static function createOrderRefundByTransaction($param, $blockCustom, $vendorUrl)
+    {
+        $result = [];
+        $shipping = [];
+        $shippingList = ['full_refund', 'amount'];
+        foreach($shippingList as $oneFiled){
+            if(isset($param[$oneFiled])&&strlen($param[$oneFiled])>0) {
+                $shipping[$oneFiled] = intval($param[$oneFiled]);
+                unset($param[$oneFiled]);
+            } }
+        if(count($shipping)>0){
+            $param['shipping'] = $shipping;
+        }
+        if(isset($blockCustom['wrap'])&&strlen($blockCustom['wrap'])>0){
+            $result[$blockCustom['wrap']] = $param;
+        }else{
+            $result = $param;
+        }
+
+        return json_encode($result);
+    }
+
+    public static function createOrderRefundByItems($param, $blockCustom, $vendorUrl)
     {
         $result = [];
         $shipping = [];

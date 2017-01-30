@@ -2983,12 +2983,6 @@
           "type": "Number",
           "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
           "required": true
-        },
-        {
-          "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
         }
       ],
       "callbacks": [
@@ -3029,12 +3023,6 @@
           "type": "Number",
           "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
           "required": true
-        },
-        {
-          "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
         }
       ],
       "callbacks": [
@@ -3101,8 +3089,8 @@
       ]
     },
     {
-      "name": "createOrderRefund",
-      "description": "Create a Refund for an existing Order. It is highly suggested that you use the calculate endpoint to produce the transactions to submit.",
+      "name": "createOrderRefundByTransaction",
+      "description": "Refund single or several transactions from an existing order.",
       "args": [
         {
           "name": "shopName",
@@ -3120,6 +3108,12 @@
           "name": "orderId",
           "type": "Number",
           "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
+        },
+        {
+          "name": "transactions",
+          "type": "Array",
+          "info": "Array of JSON objects. Array of transactions to process as refunds.",
           "required": true
         },
         {
@@ -3157,17 +3151,81 @@
           "type": "String",
           "info": "Set specific amount of shipping to refund. Takes precedence over full_refund.",
           "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "createOrderRefundByItems",
+      "description": "Refund single or several items from an existing order.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "String",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "orderId",
+          "type": "Number",
+          "info": "The unique numeric identifier for the refund. This one is used for API purposes.",
+          "required": true
         },
         {
           "name": "refundLineItems",
           "type": "Array",
           "info": "Array of JSON objects. Array of line item IDs and quantities to refund.",
+          "required": true
+        },
+        {
+          "name": "restock",
+          "type": "Boolean",
+          "info": "Boolean, whether or not to add the line items back to the store inventory.",
           "required": false
         },
         {
-          "name": "transactions",
-          "type": "Array",
-          "info": "Array of JSON objects. Array of transactions to process as refunds.",
+          "name": "notify",
+          "type": "Boolean",
+          "info": "Boolean, set to true to send a refund notification to the customer.",
+          "required": false
+        },
+        {
+          "name": "note",
+          "type": "String",
+          "info": "An optional comment attached to a refund.",
+          "required": false
+        },
+        {
+          "name": "discrepancyReason",
+          "type": "String",
+          "info": "An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).",
+          "required": false
+        },
+        {
+          "name": "shippingFullRefund",
+          "type": "Boolean",
+          "info": "Boolean, set to true to refund all remaining shipping.",
+          "required": false
+        },
+        {
+          "name": "shippingAmount",
+          "type": "String",
+          "info": "Set specific amount of shipping to refund. Takes precedence over full_refund.",
           "required": false
         }
       ],
