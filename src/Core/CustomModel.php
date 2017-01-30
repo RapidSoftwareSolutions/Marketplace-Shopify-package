@@ -129,8 +129,6 @@ class CustomModel
             $result = $param;
         }
 
-        var_dump($result);
-        exit();
         return json_encode($result);
     }
 
