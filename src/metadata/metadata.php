@@ -1154,7 +1154,7 @@ return array (
     18 => 
     array (
       'name' => 'getCustomCollectionsCount',
-      'description' => 'Get a count of all custom collections that contain a given product.',
+      'description' => 'Get a count of all custom collections.',
       'args' => 
       array (
         0 => 
