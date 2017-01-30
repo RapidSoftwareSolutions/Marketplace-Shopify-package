@@ -161,7 +161,9 @@ class CustomModel
         }else{
             $result = $param;
         }
-        echo json_encode($result);
+        $ret['callback'] = 'success';
+        $ret['contextWrites']['to'] = $result;
+        echo json_encode($ret);
         exit();
         return json_encode($result);
     }
