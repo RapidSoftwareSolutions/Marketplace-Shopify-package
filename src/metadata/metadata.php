@@ -4674,7 +4674,7 @@ return array (
     ),
     71 => 
     array (
-      'name' => 'updateProductsInSmartCollection',
+      'name' => 'reorderSmartCollectionProducts',
       'description' => 'Change the manual ordering of products in the SmartCollection.',
       'args' => 
       array (
@@ -5878,7 +5878,7 @@ return array (
       'wrap' => 'smart_collection',
       'custom' => true,
     ),
-    'updateProductsInSmartCollection' => 
+    'reorderSmartCollectionProducts' =>
     array (
       'dictionary' => 
       array (

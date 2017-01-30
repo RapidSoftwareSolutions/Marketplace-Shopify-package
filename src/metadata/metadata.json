@@ -3859,7 +3859,7 @@
       ]
     },
     {
-      "name": "updateProductsInSmartCollection",
+      "name": "reorderSmartCollectionProducts",
       "description": "Change the manual ordering of products in the SmartCollection.",
       "args": [
         {
