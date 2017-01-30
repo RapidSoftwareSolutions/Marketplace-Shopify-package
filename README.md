@@ -1003,7 +1003,7 @@ Update an existing smart collection.
 ]
 ```
 
-## Shopify.updateProductsInSmartCollection
+## Shopify.reorderSmartCollectionProducts
 Change the manual ordering of products in the SmartCollection.
 
 | Field            | Type       | Description
