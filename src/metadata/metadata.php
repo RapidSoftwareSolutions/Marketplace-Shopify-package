@@ -1155,7 +1155,7 @@ return array (
     array (
       'name' => 'getCustomCollectionsCount',
       'description' => 'Get a count of all custom collections.',
-      'args' => 
+      'args' =>
       array (
         0 => 
         array (
@@ -4080,7 +4080,7 @@ return array (
         array (
           'name' => 'kind',
           'type' => 'String',
-          'info' => 'The kind of transaction: authorization - Money that the customer has agreed to pay. Authorization period lasts for up to 7 to 30 days (depending on your payment service) while a store awaits for a customer\'s capture. capture - Transfer of money that was reserved during the authorization of a shop. sale - The combination of authorization and capture, performed in one single step. void - The cancellation of a pending authorization or capture. refund - The partial or full return of the captured money to the customer.',
+          'info' => 'Permitted values are: authorization, capture, sale, void, refund.',
           'required' => true,
         ),
         4 => 
