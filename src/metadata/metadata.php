@@ -3798,26 +3798,19 @@ return array (
         ),
         7 =>
         array (
-          'name' => 'amount',
-          'type' => 'String',
-          'info' => 'The amount of funds to be refunded.',
-          'required' => false,
-        ),
-        8 =>
-        array (
           'name' => 'discrepancyReason',
           'type' => 'String',
           'info' => 'An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).',
           'required' => false,
         ),
-        9 =>
+        8 =>
         array (
           'name' => 'shippingFullRefund',
           'type' => 'Boolean',
           'info' => 'Boolean, set to true to refund all remaining shipping.',
           'required' => false,
         ),
-        10 =>
+        9 =>
         array (
           'name' => 'shippingAmount',
           'type' => 'String',
@@ -3896,26 +3889,19 @@ return array (
         ),
         7 =>
         array (
-          'name' => 'amount',
-          'type' => 'String',
-          'info' => 'The amount of funds to be refunded.',
-          'required' => false,
-        ),
-        8 =>
-        array (
           'name' => 'discrepancyReason',
           'type' => 'String',
           'info' => 'An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).',
           'required' => false,
         ),
-        9 =>
+        8 =>
         array (
           'name' => 'shippingFullRefund',
           'type' => 'Boolean',
           'info' => 'Boolean, set to true to refund all remaining shipping.',
           'required' => false,
         ),
-        10 =>
+        9 =>
         array (
           'name' => 'shippingAmount',
           'type' => 'String',
@@ -5753,7 +5739,6 @@ return array (
         'restock' => 'restock',
         'notify' => 'notify',
         'note' => 'note',
-        'amount' => 'amount',
         'discrepancyReason' => 'discrepancy_reason',
         'shippingFullRefund' => 'full_refund',
         'shippingAmount' => 'shippingAmount',
@@ -5774,7 +5759,6 @@ return array (
         'restock' => 'restock',
         'notify' => 'notify',
         'note' => 'note',
-        'amount' => 'amount',
         'discrepancyReason' => 'discrepancy_reason',
         'shippingFullRefund' => 'full_refund',
         'shippingAmount' => 'shippingAmount',
