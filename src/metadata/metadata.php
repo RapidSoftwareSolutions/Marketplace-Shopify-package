@@ -3765,7 +3765,7 @@ return array (
         array (
           'name' => 'orderId',
           'type' => 'Number',
-          'info' => 'The unique numeric identifier for the refund. This one is used for API purposes.',
+          'info' => 'The unique numeric identifier for the order. This one is used for API purposes.',
           'required' => true,
         ),
         3 =>
@@ -3863,7 +3863,7 @@ return array (
         array (
           'name' => 'orderId',
           'type' => 'Number',
-          'info' => 'The unique numeric identifier for the refund. This one is used for API purposes.',
+          'info' => 'The unique numeric identifier for the order. This one is used for API purposes.',
           'required' => true,
         ),
         3 =>

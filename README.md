@@ -787,7 +787,7 @@ Refund single or several transactions from an existing order.
 |-------------------|------------|----------
 | shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
-| orderId           | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
+| orderId           | Number     | The unique numeric identifier for the order. This one is used for API purposes.
 | transactions      | Array      | Array of JSON objects. Array of transactions to process as refunds.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
 | notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
@@ -816,7 +816,7 @@ Refund single or several items from an existing order.
 |-------------------|------------|----------
 | shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
-| orderId           | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
+| orderId           | Number     | The unique numeric identifier for the order. This one is used for API purposes.
 | refundLineItems   | Array      | Array of JSON objects. Array of line item IDs and quantities to refund.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
 | notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
