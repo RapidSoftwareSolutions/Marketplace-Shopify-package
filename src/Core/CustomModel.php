@@ -207,12 +207,16 @@ class CustomModel
     {
         $result = [];
         $shipping = [];
-        $shippingList = ['full_refund', 'amount'];
+        $shippingList = ['full_refund'];
         foreach($shippingList as $oneFiled){
             if(isset($param[$oneFiled])&&strlen($param[$oneFiled])>0) {
                 $shipping[$oneFiled] = intval($param[$oneFiled]);
                 unset($param[$oneFiled]);
             } }
+        if(isset($param['shippingAmount'])&&strlen($param['shippingAmount'])>0) {
+            $shipping['amount'] = intval($param['shippingAmount']);
+            unset($param['shippingAmount']);
+        }
         if(count($shipping)>0){
             $param['shipping'] = $shipping;
         }
@@ -229,12 +233,16 @@ class CustomModel
     {
         $result = [];
         $shipping = [];
-        $shippingList = ['full_refund', 'amount'];
+        $shippingList = ['full_refund'];
         foreach($shippingList as $oneFiled){
             if(isset($param[$oneFiled])&&strlen($param[$oneFiled])>0) {
                 $shipping[$oneFiled] = intval($param[$oneFiled]);
                 unset($param[$oneFiled]);
             } }
+        if(isset($param['shippingAmount'])&&strlen($param['shippingAmount'])>0) {
+            $shipping['amount'] = intval($param['shippingAmount']);
+            unset($param['shippingAmount']);
+        }
         if(count($shipping)>0){
             $param['shipping'] = $shipping;
         }
