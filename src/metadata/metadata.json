@@ -3135,6 +3135,12 @@
           "required": false
         },
         {
+          "name": "amount",
+          "type": "String",
+          "info": "The amount of funds to be refunded.",
+          "required": false
+        },
+        {
           "name": "discrepancyReason",
           "type": "String",
           "info": "An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).",
@@ -3208,6 +3214,12 @@
           "name": "note",
           "type": "String",
           "info": "An optional comment attached to a refund.",
+          "required": false
+        },
+        {
+          "name": "amount",
+          "type": "String",
+          "info": "The amount of funds to be refunded.",
           "required": false
         },
         {

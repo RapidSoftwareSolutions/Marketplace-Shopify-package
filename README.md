@@ -792,6 +792,7 @@ Refund single or several transactions from an existing order.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
 | notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
 | note              | String     | An optional comment attached to a refund.
+| amount            | String     | The amount of funds to be refunded.
 | discrepancyReason | String     | An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).
 | shippingFullRefund| Boolean    | Boolean, set to true to refund all remaining shipping.
 | shippingAmount    | String     | Set specific amount of shipping to refund. Takes precedence over full_refund.
@@ -820,6 +821,7 @@ Refund single or several items from an existing order.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
 | notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
 | note              | String     | An optional comment attached to a refund.
+| amount            | String     | The amount of funds to be refunded.
 | discrepancyReason | String     | An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).
 | shippingFullRefund| Boolean    | Boolean, set to true to refund all remaining shipping.
 | shippingAmount    | String     | Set specific amount of shipping to refund. Takes precedence over full_refund.
