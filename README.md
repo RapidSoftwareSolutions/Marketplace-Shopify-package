@@ -796,6 +796,18 @@ Refund single or several transactions from an existing order.
 | shippingFullRefund| Boolean    | Boolean, set to true to refund all remaining shipping.
 | shippingAmount    | String     | Set specific amount of shipping to refund. Takes precedence over full_refund.
 
+#### transactions format
+```json
+[
+    {
+        "parent_id": 801038806,
+        "amount": 199.65,
+        "kind": "refund",
+        "gateway": "bogus"
+    }
+]
+```
+
 ## Shopify.createOrderRefundByItems
 Refund single or several items from an existing order.
 
@@ -822,18 +834,6 @@ Refund single or several items from an existing order.
     {
         "line_item_id": 518995020,
         "quantity": 1
-    }
-]
-```
-
-#### transactions format
-```json
-[
-    {
-        "parent_id": 801038806,
-        "amount": 199.65,
-        "kind": "refund",
-        "gateway": "bogus"
     }
 ]
 ```
