@@ -163,8 +163,7 @@ class CustomModel
         }
         $ret['callback'] = 'success';
         $ret['contextWrites']['to'] = $result;
-        echo json_encode($ret);
-        exit();
+
         return json_encode($result);
     }
 
