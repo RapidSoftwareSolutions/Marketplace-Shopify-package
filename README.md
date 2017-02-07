@@ -16,7 +16,7 @@ Shopify is platform for ecommerce.
    * About link syntax you can read [HERE](https://help.shopify.com/api/guides/authentication/oauth#asking-for-permission)
 6. In redirect link, one of parameter will be "code", which we will use next.
 7. Finally to get access token use "getAccessToken" block in this package.
-9. That's all. Have fun!
+8. That's all. Have fun!
 
 ## Shopify.getAccessToken
 Get access token from code provided in the redirect described.
