@@ -1,3 +1,5 @@
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/Shopify/functions?utm_source=RapidAPIGitHub_ShopifyFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
+
 # Shopify Package
 Shopify is platform for ecommerce.
 * Domain: shopify.com
