@@ -10,7 +10,7 @@
   "accounts": {
     "domain": "shopify.com",
     "credentials": [
-      "clientId", "clientSecret", "code"
+      "clientId", "clientSecret"
     ]
   },
   "blocks": [
@@ -32,7 +32,7 @@
         },
         {
           "name": "code",
-          "type": "credentials",
+          "type": "String",
           "info": "The authorization code provided in the redirect described.",
           "required": true
         },
