@@ -19,7 +19,6 @@ return array (
     array (
       0 => 'clientId',
       1 => 'clientSecret',
-      2 => 'code',
     ),
   ),
   'blocks' => 
@@ -47,7 +46,7 @@ return array (
         2 => 
         array (
           'name' => 'code',
-          'type' => 'credentials',
+          'type' => 'String',
           'info' => 'The authorization code provided in the redirect described.',
           'required' => true,
         ),
