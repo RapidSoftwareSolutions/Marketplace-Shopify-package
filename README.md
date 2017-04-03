@@ -3,7 +3,7 @@
 # Shopify Package
 Shopify is platform for ecommerce.
 * Domain: shopify.com
-* Credentials: clientId, clientSecret, code
+* Credentials: clientId, clientSecret
 
 ## How to get credentials: 
 0. Sign up in Shopify as [developer](https://developers.shopify.com/).
@@ -25,7 +25,7 @@ Get access token from code provided in the redirect described.
 |-------------|------------|----------
 | clientId    | credentials| The API Key for the app.
 | clientSecret| credentials| The Shared Secret for the app (Credential sets).
-| code        | credentials| The authorization code provided in the redirect described.
+| code        | String     | The authorization code provided in the redirect described.
 | shopName    | String     | Domain of your shop.
 
 ## Shopify.getAbandonedCheckoutsCount
