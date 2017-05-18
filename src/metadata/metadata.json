@@ -68,7 +68,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "sinceId",
@@ -132,7 +133,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "limit",
@@ -208,7 +210,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "email",
@@ -254,7 +257,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         }
       ],
       "callbacks": [
@@ -282,7 +286,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "token",
@@ -376,7 +381,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "token",
@@ -410,7 +416,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "token",
@@ -444,7 +451,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "token",
@@ -508,7 +516,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "token",
@@ -542,7 +551,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "token",
@@ -576,7 +586,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "creditCardNumber",
@@ -640,7 +651,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -680,7 +692,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "collectId",
@@ -772,7 +785,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -812,7 +826,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "collectId",
@@ -852,7 +867,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "limit",
@@ -958,7 +974,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "title",
@@ -1029,7 +1046,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "collectionId",
@@ -1069,7 +1087,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "title",
@@ -1121,7 +1140,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "collectionId",
@@ -1185,7 +1205,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "collectionId",
@@ -1219,7 +1240,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "ids",
@@ -1301,7 +1323,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "order",
@@ -1359,7 +1382,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "customerId",
@@ -1399,7 +1423,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "firstName",
@@ -1469,7 +1494,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "customerId",
@@ -1533,7 +1559,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "customerId",
@@ -1567,7 +1594,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "customerId",
@@ -1602,7 +1630,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         }
       ],
       "callbacks": [
@@ -1630,7 +1659,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "customerId",
@@ -1664,7 +1694,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "objectType",
@@ -1752,7 +1783,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "eventId",
@@ -1792,7 +1824,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "objectType",
@@ -1880,7 +1913,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "createdAtMin",
@@ -1920,7 +1954,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "ids",
@@ -2050,7 +2085,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "vendor",
@@ -2138,7 +2174,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2178,7 +2215,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "title",
@@ -2254,7 +2292,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2330,7 +2369,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2364,7 +2404,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2410,7 +2451,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2486,7 +2528,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2532,7 +2575,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2614,7 +2658,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2690,7 +2735,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2730,7 +2776,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2788,7 +2835,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2822,7 +2870,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "variantId",
@@ -2856,7 +2905,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2896,7 +2946,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "variantId",
@@ -2936,7 +2987,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "productId",
@@ -2976,7 +3028,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "orderId",
@@ -3010,7 +3063,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "orderId",
@@ -3050,7 +3104,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "orderId",
@@ -3102,7 +3157,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "orderId",
@@ -3178,7 +3234,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "orderId",
@@ -3254,7 +3311,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "fields",
@@ -3288,7 +3346,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "orderId",
@@ -3334,7 +3393,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "orderId",
@@ -3368,7 +3428,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "orderId",
@@ -3414,7 +3475,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "orderId",
@@ -3460,7 +3522,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "applicationChargeId",
@@ -3506,7 +3569,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "applicationChargeId",
@@ -3552,7 +3616,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "applicationChargeId",
@@ -3592,7 +3657,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "limit",
@@ -3698,7 +3764,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "title",
@@ -3768,7 +3835,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "smartCollectionId",
@@ -3808,7 +3876,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "title",
@@ -3866,7 +3935,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "smartCollectionId",
@@ -3930,7 +4000,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "smartCollectionId",
@@ -3976,7 +4047,8 @@
           "name": "accessToken",
           "type": "String",
           "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
-          "required": true
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
         },
         {
           "name": "smartCollectionId",
