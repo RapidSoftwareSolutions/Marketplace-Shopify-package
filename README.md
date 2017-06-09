@@ -28,6 +28,15 @@ Get access token from code provided in the redirect described.
 | code        | String     | The authorization code provided in the redirect described.
 | shopName    | String     | Domain of your shop.
 
+## Shopify.reorderSmartCollectionProducts
+| Field             | Type       | Description
+|-------------------|------------|------------
+| shopName          | String     | Domain of your shop
+| accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed
+| smartCollectionId | Number     | The unique numeric identifier for the smart collection
+| products          | JSON       | Array of product ids in the order you want them arranged. (Applies only when sort_order is set to \"manual\")
+| sortOrder         | String     | The type of sorting to apply. Valid values are listed in the Properties section above. (default: (current value))
+
 ## Shopify.getAbandonedCheckoutsCount
 Get a count of abandoned checkouts.
 
@@ -36,11 +45,11 @@ Get a count of abandoned checkouts.
 | shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | sinceId     | Number     | Restrict results to after the specified ID.
-| createdAtMin| String     | Show checkouts created after date (format: 2014-04-25T16:15:47-04:00).
-| createdAtMax| String     | Show checkouts created before date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMin| String     | Show checkouts last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax| String     | Show checkouts last updated before date (format: 2014-04-25T16:15:47-04:00).
-| status      | String     | open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.
+| createdAtMin| DatePicker | Show checkouts created after date (format: 2014-04-25T16:15:47-04:00).
+| createdAtMax| DatePicker | Show checkouts created before date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMin| DatePicker | Show checkouts last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax| DatePicker | Show checkouts last updated before date (format: 2014-04-25T16:15:47-04:00).
+| status      | Select     | open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.
 
 ## Shopify.getAbandonedCheckouts
 List all abandoned checkouts.
@@ -52,11 +61,11 @@ List all abandoned checkouts.
 | limit       | Number     | Amount of results (default: 50) (maximum: 250).
 | page        | Number     | Page to show (default: 1).
 | sinceId     | Number     | Restrict results to after the specified ID.
-| createdAtMin| String     | Show checkouts created after date (format: 2014-04-25T16:15:47-04:00).
-| createdAtMax| String     | Show checkouts created before date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMin| String     | Show checkouts last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax| String     | Show checkouts last updated before date (format: 2014-04-25T16:15:47-04:00).
-| status      | String     | open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.
+| createdAtMin| DatePicker | Show checkouts created after date (format: 2014-04-25T16:15:47-04:00).
+| createdAtMax| DatePicker | Show checkouts created before date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMin| DatePicker | Show checkouts last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax| DatePicker | Show checkouts last updated before date (format: 2014-04-25T16:15:47-04:00).
+| status      | Select     | open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.
 
 ## Shopify.createCheckout
 Create a new Checkout.
@@ -210,7 +219,7 @@ Get the collect with a certain id, or for a given product AND collection.
 | shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | collectId  | Number     | The id of the collect to retrieve.
-| fields     | String     | Comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.getCustomCollections
 Get a list of all custom collections that contain a given product.
@@ -221,17 +230,17 @@ Get a list of all custom collections that contain a given product.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | limit          | Number     | Amount of results (default: 50) (maximum: 250).
 | page           | Number     | Page to show (default: 1).
-| ids            | String     | A comma-separated list of collection ids.
+| ids            | List       | List of collection ids.
 | sinceId        | Number     | Restrict results to after the specified ID.
 | title          | String     | Show custom collections with given title.
 | productId      | Number     | Show custom collections that includes given product.
 | handle         | String     | Filter by custom collection handle.
-| updatedAtMin   | String     | Show custom collections last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax   | String     | Show custom collections last updated before date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMin | String     | Show custom collections published after date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMax | String     | Show custom collections published before date (format: 2014-04-25T16:15:47-04:00).
-| publishedStatus| String     | published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).
-| fields         | String     | comma-separated list of fields to include in the response.
+| updatedAtMin   | DatePicker | Show custom collections last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax   | DatePicker | Show custom collections last updated before date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMin | DatePicker | Show custom collections published after date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMax | DatePicker | Show custom collections published before date (format: 2014-04-25T16:15:47-04:00).
+| publishedStatus| Select     | published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).
+| fields         | List       | List of fields to include in the response.
 
 ## Shopify.getCustomCollectionsCount
 Get a count of all custom collections.
@@ -242,11 +251,11 @@ Get a count of all custom collections.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | title          | String     | Count custom collections with given title.
 | productId      | Number     | Count custom collections that includes given product.
-| updatedAtMin   | String     | Count custom collections last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax   | String     | Count custom collections last updated before date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMin | String     | Show custom collections published after date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMax | String     | Show custom collections published before date (format: 2014-04-25T16:15:47-04:00).
-| publishedStatus| String     | published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).
+| updatedAtMin   | DatePicker | Count custom collections last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax   | DatePicker | Count custom collections last updated before date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMin | DatePicker | Show custom collections published after date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMax | DatePicker | Show custom collections published before date (format: 2014-04-25T16:15:47-04:00).
+| publishedStatus| Select     | published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).
 
 ## Shopify.getSingleCustomCollection
 Get a single custom collection.
@@ -256,7 +265,7 @@ Get a single custom collection.
 | shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | collectionId| Number     | The id of the custom collection containing the product.
-| fields      | String     | Comma-separated list of fields to include in the response.
+| fields      | List       | List of fields to include in the response.
 
 ## Shopify.createCustomCollection
 Create a new custom collection.
@@ -300,15 +309,15 @@ Retrieve all customers of a shop.
 |-------------|------------|----------
 | shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
-| ids         | String     | A comma-separated list of customer ids.
+| ids         | List       | List of customer ids.
 | sinceId     | Number     | Restrict results to after the specified ID.
-| createdAtMin| String     | Show customers created after date (format: 2014-04-25T16:15:47-04:00).
-| createdAtMax| String     | Show customers created before date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMin| String     | Show customers last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax| String     | Show customers last updated before date (format: 2014-04-25T16:15:47-04:00).
+| createdAtMin| DatePicker | Show customers created after date (format: 2014-04-25T16:15:47-04:00).
+| createdAtMax| DatePicker | Show customers created before date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMin| DatePicker | Show customers last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax| DatePicker | Show customers last updated before date (format: 2014-04-25T16:15:47-04:00).
 | limit       | Number     | Amount of results (default: 50) (maximum: 250).
 | page        | Number     | Page to show (default: 1).
-| fields      | String     | comma-separated list of fields to include in the response.
+| fields      | List       | List of fields to include in the response.
 
 ## Shopify.searchCustomers
 Search customers.
@@ -321,7 +330,7 @@ Search customers.
 | query      | String     | Text to search customers.
 | page       | Number     | Page to show (default: 1).
 | limit      | Number     | Amount of results (default: 50) (maximum: 250).
-| fields     | String     | comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.getSingleCustomer
 Get a single customer.
@@ -331,7 +340,7 @@ Get a single customer.
 | shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | customerId | String     | The id of the customer.
-| fields     | String     | Comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.createCustomer
 Create a new customer.
@@ -359,7 +368,7 @@ Update a customer.
 | firstName  | String     | The customer's first name.
 | lastName   | String     | The customer's last name.
 | email      | String     | The email address of the customer.
-| tags       | String     | Tags are additional short descriptors formatted as a string of comma-separated values. For example, if an article has three tags: tag1, tag2, tag3.
+| tags       | List       | Tags are additional short descriptors formatted as a string of comma-separated values. For example, if an article has three tags: tag1, tag2, tag3.
 | note       | String     | A note about the customer.
 
 ## Shopify.createAccountActivationURL
@@ -409,11 +418,11 @@ Get the events from a particular product.
 | limit       | Number     | Amount of results (default: 50) (maximum: 250).
 | page        | Number     | Page to show (default: 1).
 | sinceId     | Number     | Restrict results to after the specified ID.
-| createdAtMin| String     | Show events created at or after date and time (format: 2014-04-25T16:15:47-04:00).
-| createdAtMax| String     | Show events created at or before date and time (format: 2014-04-25T16:15:47-04:00).
+| createdAtMin| DatePicker | Show events created at or after date and time (format: 2014-04-25T16:15:47-04:00).
+| createdAtMax| DatePicker | Show events created at or before date and time (format: 2014-04-25T16:15:47-04:00).
 | filter      | String     | Only show events specified in filter.
 | verb        | String     | Only show events of a certain kind.
-| fields      | String     | comma-separated list of fields to include in the response.
+| fields      | List       | List of fields to include in the response.
 
 ## Shopify.getSingleEvent
 Get a single Event.
@@ -423,7 +432,7 @@ Get a single Event.
 | shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | eventId    | Number     | The unique numeric identifier for the event.
-| fields     | String     | Comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.getEventByType
 Retrieve event by type.
@@ -437,11 +446,11 @@ Retrieve event by type.
 | limit       | Number     | Amount of results (default: 50) (maximum: 250).
 | page        | Number     | Page to show (default: 1).
 | sinceId     | Number     | Restrict results to after the specified ID.
-| createdAtMin| String     | Show events created at or after date and time (format: 2014-04-25T16:15:47-04:00).
-| createdAtMax| String     | Show events created at or before date and time (format: 2014-04-25T16:15:47-04:00).
+| createdAtMin| DatePicker | Show events created at or after date and time (format: 2014-04-25T16:15:47-04:00).
+| createdAtMax| DatePicker | Show events created at or before date and time (format: 2014-04-25T16:15:47-04:00).
 | filter      | String     | Only show events specified in filter.
 | verb        | String     | Only show events of a certain kind.
-| fields      | String     | comma-separated list of fields to include in the response.
+| fields      | List       | List of fields to include in the response.
 
 ## Shopify.getEventsCount
 Receive a count of all Events.
@@ -450,8 +459,8 @@ Receive a count of all Events.
 |-------------|------------|----------
 | shopName    | String     | Domain of your shop.
 | accessToken | String     | API access token that can be used to access the shop’s data as long as the client is installed.
-| createdAtMin| String     | Count events created at or after date and time (format: 2014-04-25T16:15:47-04:00).
-| createdAtMax| String     | Count events created at or before date and time (format: 2014-04-25T16:15:47-04:00).
+| createdAtMin| DatePicker | Count events created at or after date and time (format: 2014-04-25T16:15:47-04:00).
+| createdAtMax| DatePicker | Count events created at or before date and time (format: 2014-04-25T16:15:47-04:00).
 
 ## Shopify.getProducts
 Get a list of products.
@@ -460,7 +469,7 @@ Get a list of products.
 |----------------|------------|----------
 | shopName       | String     | Domain of your shop.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
-| ids            | String     | A comma-separated list of product ids.
+| ids            | List       | List of product ids.
 | limit          | Number     | Amount of results (default: 50) (maximum: 250).
 | page           | Number     | Page to show (default: 1).
 | sinceId        | Number     | Restrict results to after the specified ID.
@@ -469,14 +478,14 @@ Get a list of products.
 | handle         | String     | Filter by product handle.
 | productType    | String     | Filter by product type.
 | collectionId   | Number     | Filter by collection id.
-| createdAtMin   | String     | Show products created after date (format: 2014-04-25T16:15:47-04:00).
-| createdAtMax   | String     | Show products created before date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMin   | String     | Show products last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax   | String     | Show products last updated before date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMin | String     | Show products published after date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMax | String     | Show products published before date (format: 2014-04-25T16:15:47-04:00).
-| publishedStatus| String     | published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).
-| fields         | String     | comma-separated list of fields to include in the response.
+| createdAtMin   | DatePicker | Show products created after date (format: 2014-04-25T16:15:47-04:00).
+| createdAtMax   | DatePicker | Show products created before date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMin   | DatePicker | Show products last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax   | DatePicker | Show products last updated before date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMin | DatePicker | Show products published after date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMax | DatePicker | Show products published before date (format: 2014-04-25T16:15:47-04:00).
+| publishedStatus| Select     | published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).
+| fields         | List       | List of fields to include in the response.
 
 ## Shopify.getProductsCount
 Get a count of all products of a given collection.
@@ -488,13 +497,13 @@ Get a count of all products of a given collection.
 | vendor         | String     | Filter by product vendor.
 | productType    | String     | Filter by product type.
 | collectionId   | Number     | Filter by collection id.
-| createdAtMin   | String     | Show products created after date (format: 2014-04-25T16:15:47-04:00).
-| createdAtMax   | String     | Show products created before date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMin   | String     | Show products last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax   | String     | Show products last updated before date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMin | String     | Show products published after date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMax | String     | Show products published before date (format: 2014-04-25T16:15:47-04:00).
-| publishedStatus| String     | published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).
+| createdAtMin   | DatePicker | Show products created after date (format: 2014-04-25T16:15:47-04:00).
+| createdAtMax   | DatePicker | Show products created before date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMin   | DatePicker | Show products last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax   | DatePicker | Show products last updated before date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMin | DatePicker | Show products published after date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMax | DatePicker | Show products published before date (format: 2014-04-25T16:15:47-04:00).
+| publishedStatus| Select     | published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).
 
 ## Shopify.getSingleProduct
 Get a single product.
@@ -504,7 +513,7 @@ Get a single product.
 | shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
-| fields     | String     | Comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.createProduct
 Create a new product.
@@ -518,8 +527,8 @@ Create a new product.
 | productType| String     | A categorization that a product can be tagged with, commonly used for filtering and searching.
 | imageSrc   | File       | Image associated with the product.
 | vendor     | String     | The name of the vendor of the product.
-| variants   | Array      | Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant.
-| tags       | String     | A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.
+| variants   | JSON       | Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant.
+| tags       | List       | A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.
 | published  | Boolean    | Is published product.
 
 #### variants format
@@ -550,8 +559,8 @@ Update a product and associated variants and images.
 | bodyHtml   | String     | The description of the product, complete with HTML formatting.
 | productType| String     | A categorization that a product can be tagged with, commonly used for filtering and searching.
 | vendor     | String     | The name of the vendor of the product.
-| variants   | Array      | Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant..
-| tags       | String     | A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.
+| variants   | JSON       | Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant..
+| tags       | List       | A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.
 | published  | Boolean    | Is published product.
 
 #### variants format
@@ -588,7 +597,7 @@ Get all product images.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 | sinceId    | Number     | Restrict results to after the specified ID.
-| fields     | String     | comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.getProductImagesCount
 Get a count of all product images.
@@ -599,12 +608,12 @@ Get a count of all product images.
 | accessToken   | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId     | Number     | The unique numeric identifier for the product.
 | sinceId       | Number     | Restrict results to after the specified ID.
-| createdAtMin  | String     | Count articles created after date (format: 2014-04-25T16:15:47-04:00).
-| createdAtMax  | String     | Count articles created before date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMin  | String     | Count articles last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax  | String     | Count articles last updated before date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMin| String     | Count articles published after date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMax| String     | Count articles published before date (format: 2014-04-25T16:15:47-04:00).
+| createdAtMin  | DatePicker | Count articles created after date (format: 2014-04-25T16:15:47-04:00).
+| createdAtMax  | DatePicker | Count articles created before date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMin  | DatePicker | Count articles last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax  | DatePicker | Count articles last updated before date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMin| DatePicker | Count articles published after date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMax| DatePicker | Count articles published before date (format: 2014-04-25T16:15:47-04:00).
 
 ## Shopify.getSingleProductImage
 Get a single product image by id.
@@ -615,7 +624,7 @@ Get a single product image by id.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId  | Number     | The unique numeric identifier for the product.
 | imageId    | Number     | A unique numeric identifier for the product image.
-| fields     | String     | Comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.createProductImage
 Create a new product image.
@@ -632,7 +641,7 @@ Create a new product image.
 | metafieldsValue    | String     | Information to be stored as metadata.
 | metafieldsValueType| String     | States whether the information in the value is stored as a 'string' or 'integer'.
 | metafieldsNamespace| String     | Container for a set of metadata. Namespaces help distinguish between metadata you created against metadata created by another individual with a similar namespace (maximum of 20 characters).
-| variantIds         | String     | comma-separated list of variant ids associated with the image.
+| variantIds         | List       | List of variant ids associated with the image.
 
 ## Shopify.updateProductImage
 Modify an existing product image.
@@ -648,7 +657,7 @@ Modify an existing product image.
 | metafieldsValue    | String     | Information to be stored as metadata.
 | metafieldsValueType| String     | States whether the information in the value is stored as a 'string' or 'integer'.
 | metafieldsNamespace| String     | Container for a set of metadata. Namespaces help distinguish between metadata you created against metadata created by another individual with a similar namespace (maximum of 20 characters).
-| variantIds         | String     | comma-separated list of variant ids associated with the image.
+| variantIds         | List       | List of variant ids associated with the image.
 
 ## Shopify.deleteProductImage
 Delete a product image.
@@ -671,7 +680,7 @@ Get a list of product variants.
 | limit      | Number     | Amount of results (default: 50) (maximum: 250).
 | page       | Number     | Page to show (default: 1).
 | sinceId    | Number     | Restrict results to after the specified ID.
-| fields     | String     | comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.getProductVariantsCount
 Get a count of product variants.
@@ -766,7 +775,7 @@ Calculate refund transactions based on line items and shipping. The returned res
 | orderId           | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | shippingFullRefund| Boolean    | Boolean, set to true to refund all remaining shipping.
 | shippingAmount    | String     | Set specific amount of shipping to refund. Takes precedence over full_refund.
-| refundLineItems   | Array      | Array of JSON objects, of line item IDs and quantities to refund.
+| refundLineItems   | JSON       | Array of JSON objects, of line item IDs and quantities to refund.
 
 #### refundLineItems format
 ```json
@@ -790,11 +799,11 @@ Refund single or several transactions from an existing order.
 | shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId           | Number     | The unique numeric identifier for the order. This one is used for API purposes.
-| transactions      | Array      | Array of JSON objects. Array of transactions to process as refunds.
+| transactions      | JSON       | Array of JSON objects. Array of transactions to process as refunds.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
 | notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
 | note              | String     | An optional comment attached to a refund.
-| discrepancyReason | String     | An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).
+| discrepancyReason | Select     | An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).
 | shippingFullRefund| Boolean    | Boolean, set to true to refund all remaining shipping.
 | shippingAmount    | String     | Set specific amount of shipping to refund. Takes precedence over full_refund.
 
@@ -818,11 +827,11 @@ Refund single or several items from an existing order.
 | shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId           | Number     | The unique numeric identifier for the order. This one is used for API purposes.
-| refundLineItems   | Array      | Array of JSON objects. Array of line item IDs and quantities to refund.
+| refundLineItems   | JSON       | Array of JSON objects. Array of line item IDs and quantities to refund.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
 | notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
 | note              | String     | An optional comment attached to a refund.
-| discrepancyReason | String     | An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).
+| discrepancyReason | Select     | An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).
 | shippingFullRefund| Boolean    | Boolean, set to true to refund all remaining shipping.
 | shippingAmount    | String     | Set specific amount of shipping to refund. Takes precedence over full_refund.
 
@@ -847,7 +856,7 @@ Get the configuration of the shop account.
 |------------|------------|----------
 | shopName   | String     | Domain of your shop.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
-| fields     | String     | comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.getTransactions
 Get the Representation of all money transfers.
@@ -878,7 +887,7 @@ Get the Representation of a specific transaction.
 | accessToken  | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId      | Number     | The unique numeric order identifier. This one is used for API purposes.
 | transactionId| Number     | A unique numeric identifier for the transaction.
-| fields       | String     | Comma-separated list of fields to include in the response.
+| fields       | List       | List of fields to include in the response.
 
 ## Shopify.createTransaction
 Create new transaction.
@@ -911,7 +920,7 @@ Retrieve a single charge.
 | accessToken        | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | applicationChargeId| Number     | A unique numeric identifier for the application charge.
 | chargeId           | Number     | A unique numeric identifier for the usage charge.
-| fields             | String     | comma-separated list of fields to include in the response.
+| fields             | List       | List of fields to include in the response.
 
 ## Shopify.getUsageCharges
 All past and present usage charges requests are retrieved by this request.
@@ -921,7 +930,7 @@ All past and present usage charges requests are retrieved by this request.
 | shopName           | String     | Domain of your shop.
 | accessToken        | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | applicationChargeId| Number     | A unique numeric identifier for the application charge.
-| fields             | String     | comma-separated list of fields to include in the response.
+| fields             | List       | List of fields to include in the response.
 
 ## Shopify.getSmartCollections
 Get a list of all smart collections that contain a given product.
@@ -932,17 +941,17 @@ Get a list of all smart collections that contain a given product.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | limit          | Number     | Amount of results (default: 50) (maximum: 250).
 | page           | Number     | Page to show (default: 1).
-| ids            | String     | A comma-separated list of collection ids.
+| ids            | List       | List of collection ids.
 | sinceId        | Number     | Restrict results to after the specified ID.
 | title          | String     | Show smart collections with given title.
 | productId      | Number     | Show smart collections that includes given product.
 | handle         | String     | Filter by smart collection handle.
-| updatedAtMin   | String     | Show smart collections last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax   | String     | Show smart collections last updated before date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMin | String     | Show smart collections published after date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMax | String     | Show smart collections published before date (format: 2014-04-25T16:15:47-04:00).
-| publishedStatus| String     | published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).
-| fields         | String     | comma-separated list of fields to include in the response.
+| updatedAtMin   | DatePicker | Show smart collections last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax   | DatePicker | Show smart collections last updated before date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMin | DatePicker | Show smart collections published after date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMax | DatePicker | Show smart collections published before date (format: 2014-04-25T16:15:47-04:00).
+| publishedStatus| Select     | published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).
+| fields         | List       | List of fields to include in the response.
 
 ## Shopify.getSmartCollectionsCount
 Get a count of all smart collections that contain a given product.
@@ -953,11 +962,11 @@ Get a count of all smart collections that contain a given product.
 | accessToken    | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | title          | String     | Show smart collections with given title.
 | productId      | Number     | Show smart collections that includes given product.
-| updatedAtMin   | String     | Show smart collections last updated after date (format: 2014-04-25T16:15:47-04:00).
-| updatedAtMax   | String     | Show smart collections last updated before date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMin | String     | Show smart collections published after date (format: 2014-04-25T16:15:47-04:00).
-| publishedAtMax | String     | Show smart collections published before date (format: 2014-04-25T16:15:47-04:00).
-| publishedStatus| String     | published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).
+| updatedAtMin   | DatePicker | Show smart collections last updated after date (format: 2014-04-25T16:15:47-04:00).
+| updatedAtMax   | DatePicker | Show smart collections last updated before date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMin | DatePicker | Show smart collections published after date (format: 2014-04-25T16:15:47-04:00).
+| publishedAtMax | DatePicker | Show smart collections published before date (format: 2014-04-25T16:15:47-04:00).
+| publishedStatus| Select     | published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).
 
 ## Shopify.getSingleSmartCollection
 Get a single smart collection.
@@ -967,7 +976,7 @@ Get a single smart collection.
 | shopName         | String     | Domain of your shop.
 | accessToken      | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | smartCollectionId| Number     | The unique numeric identifier for the smart collection.
-| fields           | String     | comma-separated list of fields to include in the response.
+| fields           | List       | List of fields to include in the response.
 
 ## Shopify.createSmartCollection
 Create a new smart collection.
@@ -980,7 +989,7 @@ Create a new smart collection.
 | bodyHtml   | String     | The description of the smart collection, complete with HTML markup. Many templates display this on their smart collection page.
 | imageSrc   | File       | The collection image.
 | published  | Boolean    | Is published collection.
-| rules      | Array      | Array of JSON objects. The list of rules that define what products go into the smart collection.
+| rules      | JSON       | Array of JSON objects. The list of rules that define what products go into the smart collection.
 
 #### rules format
 ```json
@@ -1005,7 +1014,7 @@ Update an existing smart collection.
 | bodyHtml         | String     | The description of the smart collection, complete with HTML markup. Many templates display this on their smart collection page.
 | imageSrc         | File       | The collection image.
 | published        | Boolean    | Is published collection.
-| rules            | Array      | Array of JSON objects. The list of rules that define what products go into the smart collection.
+| rules            | JSON       | Array of JSON objects. The list of rules that define what products go into the smart collection.
 
 #### rules format
 ```json
@@ -1026,7 +1035,7 @@ Change the manual ordering of products in the SmartCollection.
 | shopName         | String     | Domain of your shop.
 | accessToken      | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | smartCollectionId| Number     | The unique numeric identifier for the smart collection.
-| products         | Array      | Array of product ids in the order you want them arranged. (Applies only when sort_order is set to "manual").
+| products         | List       | List of product ids in the order you want them arranged. (Applies only when sort_order is set to "manual").
 | sortOrder        | String     | The type of sorting to apply. Valid values are listed in the Properties section above. (default: (current value)).
 
 #### products format

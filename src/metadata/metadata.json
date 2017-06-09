@@ -5,12 +5,16 @@
   "image": "https://logo.clearbit.com/shopify.com?s=128",
   "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-Shopify-package",
   "keywords": [
-    "API", "ecommerce", "service", "Shopify"
+    "API",
+    "ecommerce",
+    "service",
+    "Shopify"
   ],
   "accounts": {
     "domain": "shopify.com",
     "credentials": [
-      "clientId", "clientSecret"
+      "clientId",
+      "clientSecret"
     ]
   },
   "blocks": [
@@ -79,31 +83,35 @@
         },
         {
           "name": "createdAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show checkouts created after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "createdAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show checkouts created before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show checkouts last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show checkouts last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "status",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "open",
+            "closed"
+          ],
           "info": "Takes: open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.",
           "required": false
         }
@@ -156,31 +164,35 @@
         },
         {
           "name": "createdAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show checkouts created after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "createdAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show checkouts created before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show checkouts last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show checkouts last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "status",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "open",
+            "closed"
+          ],
           "info": "Takes: open - All open abandoned checkouts (default), closed - Show only closed abandoned checkouts.",
           "required": false
         }
@@ -837,9 +849,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "stucture": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -884,9 +902,15 @@
         },
         {
           "name": "ids",
-          "type": "String",
-          "info": "A comma-separated list of collection ids.",
-          "required": false
+          "type": "List",
+          "info": "List of collection ids.",
+          "required": false,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": false
+          }
         },
         {
           "name": "sinceId",
@@ -914,39 +938,50 @@
         },
         {
           "name": "updatedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show custom collections last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show custom collections last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show custom collections published after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show custom collections published before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedStatus",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "published",
+            "unpublished",
+            "any"
+          ],
           "info": "Takes: published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).",
           "required": false
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -991,35 +1026,39 @@
         },
         {
           "name": "updatedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Count custom collections last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Count custom collections last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show custom collections published after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show custom collections published before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedStatus",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "published",
+            "unpublished",
+            "any"
+          ],
           "info": "Takes: published - Show only published custom collections, unpublished - Show only unpublished custom collections, any - Show all custom collections (default).",
           "required": false
         }
-
       ],
       "callbacks": [
         {
@@ -1057,9 +1096,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -1245,9 +1290,15 @@
         },
         {
           "name": "ids",
-          "type": "String",
-          "info": "A comma-separated list of customer ids.",
-          "required": false
+          "type": "List",
+          "info": "List of customer ids.",
+          "required": false,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": false
+          }
         },
         {
           "name": "sinceId",
@@ -1257,25 +1308,25 @@
         },
         {
           "name": "createdAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show customers created after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "createdAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show customers created before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show customers last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show customers last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
@@ -1293,9 +1344,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -1352,9 +1409,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -1393,9 +1456,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -1523,9 +1592,15 @@
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "Tags are additional short descriptors formatted as a string of comma-separated values. For example, if an article has three tags: tag1, tag2, tag3.",
-          "required": false
+          "type": "List",
+          "info": "List of tags. For example, if an article has three tags: tag1, tag2, tag3.",
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag",
+            "required": false
+          }
         },
         {
           "name": "note",
@@ -1603,7 +1678,6 @@
           "info": "The id of the customer.",
           "required": true
         }
-
       ],
       "callbacks": [
         {
@@ -1729,13 +1803,13 @@
         },
         {
           "name": "createdAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show events created at or after date and time (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "createdAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show events created at or before date and time (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
@@ -1753,9 +1827,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -1794,9 +1874,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -1859,13 +1945,13 @@
         },
         {
           "name": "createdAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show events created at or after date and time (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "createdAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show events created at or before date and time (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
@@ -1883,9 +1969,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -1918,13 +2010,13 @@
         },
         {
           "name": "createdAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Count events created at or after date and time (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "createdAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Count events created at or before date and time (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         }
@@ -1959,9 +2051,15 @@
         },
         {
           "name": "ids",
-          "type": "String",
-          "info": "A comma-separated list of product ids.",
-          "required": false
+          "type": "List",
+          "info": "List of product ids.",
+          "required": false,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": false
+          }
         },
         {
           "name": "limit",
@@ -2013,51 +2111,62 @@
         },
         {
           "name": "createdAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products created after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "createdAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products created before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products published after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products published before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedStatus",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "published",
+            "unpublished",
+            "any"
+          ],
           "info": "Takes: published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).",
           "required": false
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -2108,43 +2217,48 @@
         },
         {
           "name": "createdAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products created after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "createdAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products created before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products published after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show products published before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedStatus",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "published",
+            "unpublished",
+            "any"
+          ],
           "info": "published - Show only published products, unpublished - Show only unpublished products, any - Show all products (default).",
           "required": false
         }
@@ -2185,9 +2299,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -2250,15 +2370,21 @@
         },
         {
           "name": "variants",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant.",
           "required": false
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.",
-          "required": false
+          "type": "List",
+          "info": "A categorization that a product can be tagged with, commonly used for filtering and searching. Each of tag has a character limit of 255.",
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag",
+            "required": false
+          }
         },
         {
           "name": "published",
@@ -2327,15 +2453,21 @@
         },
         {
           "name": "variants",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant..",
           "required": false
         },
         {
           "name": "tags",
-          "type": "String",
+          "type": "List",
           "info": "A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.",
-          "required": false
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag",
+            "required": false
+          }
         },
         {
           "name": "published",
@@ -2421,9 +2553,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -2468,37 +2606,37 @@
         },
         {
           "name": "createdAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Count articles created after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "createdAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Count articles created before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
-          "name": "updatedAtMin",
-          "type": "String",
+          "name": "createdAtMax",
+          "type": "DatePicker",
           "info": "Count articles last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
-          "name": "updatedAtMax",
-          "type": "String",
+          "name": "createdAtMax",
+          "type": "DatePicker",
           "info": "Count articles last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Count articles published after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Count articles published before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         }
@@ -2545,9 +2683,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -2628,9 +2772,15 @@
         },
         {
           "name": "variantIds",
-          "type": "String",
-          "info": "Comma-separated list of variant ids associated with the image.",
-          "required": false
+          "type": "List",
+          "info": "List of variant ids associated with the image.",
+          "required": false,
+          "structure": {
+            "name": "variantId",
+            "type": "String",
+            "info": "Variand ID",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -2705,9 +2855,15 @@
         },
         {
           "name": "variantIds",
-          "type": "String",
-          "info": "Comma-separated list of variant ids associated with the image.",
-          "required": false
+          "type": "List",
+          "info": "List of variant ids associated with the image.",
+          "required": false,
+          "structure": {
+            "name": "variandId",
+            "type": "String",
+            "info": "Variand ID",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -2805,9 +2961,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -3127,7 +3289,7 @@
         },
         {
           "name": "refundLineItems",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects, of line item IDs and quantities to refund.",
           "required": false
         }
@@ -3168,7 +3330,7 @@
         },
         {
           "name": "transactions",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects. Array of transactions to process as refunds.",
           "required": true
         },
@@ -3192,7 +3354,13 @@
         },
         {
           "name": "discrepancyReason",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "restock",
+            "damage",
+            "customer",
+            "other"
+          ],
           "info": "An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).",
           "required": false
         },
@@ -3245,7 +3413,7 @@
         },
         {
           "name": "refundLineItems",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects. Array of line item IDs and quantities to refund.",
           "required": true
         },
@@ -3269,7 +3437,13 @@
         },
         {
           "name": "discrepancyReason",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "restock",
+            "damage",
+            "customer",
+            "other"
+          ],
           "info": "An optional comment, used if there is a discrepancy between calculated and actual refund amounts (one of: restock, damage, customer, other).",
           "required": false
         },
@@ -3316,9 +3490,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -3363,9 +3543,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -3445,9 +3631,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -3586,9 +3778,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -3627,9 +3825,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -3674,9 +3878,15 @@
         },
         {
           "name": "ids",
-          "type": "String",
-          "info": "A comma-separated list of collection ids.",
-          "required": false
+          "type": "List",
+          "info": "List of collection ids.",
+          "required": false,
+          "structure": {
+            "name": "id",
+            "type": "String",
+            "info": "ID",
+            "required": false
+          }
         },
         {
           "name": "sinceId",
@@ -3704,39 +3914,50 @@
         },
         {
           "name": "updatedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show smart collections last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show smart collections last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show smart collections published after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show smart collections published before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedStatus",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "published",
+            "unpublished",
+            "any"
+          ],
           "info": "Takes: published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).",
           "required": false
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -3781,31 +4002,36 @@
         },
         {
           "name": "updatedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show smart collections last updated after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "updatedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show smart collections last updated before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMin",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show smart collections published after date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedAtMax",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Show smart collections published before date (format: 2014-04-25T16:15:47-04:00).",
           "required": false
         },
         {
           "name": "publishedStatus",
-          "type": "String",
+          "type": "Select",
+          "options": [
+            "published",
+            "unpublished",
+            "any"
+          ],
           "info": "Takes: published - Show only published smart collections, unpublished - Show only unpublished smart collections, any - Show all smart collections (default).",
           "required": false
         }
@@ -3846,9 +4072,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -3905,7 +4137,7 @@
         },
         {
           "name": "rules",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects. The list of rules that define what products go into the smart collection.",
           "required": false
         }
@@ -3970,7 +4202,7 @@
         },
         {
           "name": "rules",
-          "type": "Array",
+          "type": "JSON",
           "info": "Array of JSON objects. The list of rules that define what products go into the smart collection.",
           "required": false
         }
@@ -4011,9 +4243,15 @@
         },
         {
           "name": "products",
-          "type": "Array",
+          "type": "List",
           "info": "Array of product ids in the order you want them arranged. (Applies only when sort_order is set to \"manual\").",
-          "required": false
+          "required": false,
+          "structure":{
+            "name": "productId",
+            "type": "Number",
+            "info": "Prodict ID",
+            "required": false
+          }
         },
         {
           "name": "sortOrder",
