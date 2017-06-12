@@ -5137,7 +5137,7 @@ return [
                     'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/orders/{{orderId}}/transactions/count.json',
                     'method' => 'GET',
                     'wrap' => '',
-                    'custom' => true
+                    'custom' => false
                 ],
             'getSingleTransaction' =>
                 [
