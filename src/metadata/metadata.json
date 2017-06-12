@@ -852,7 +852,7 @@
           "type": "List",
           "info": "List of fields to include in the response.",
           "required": false,
-          "stucture": {
+          "structure": {
             "name": "field",
             "type": "String",
             "info": "Field",
@@ -2370,9 +2370,15 @@
         },
         {
           "name": "variants",
-          "type": "JSON",
-          "info": "Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant.",
-          "required": false
+          "type": "List",
+          "info": "List of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant.",
+          "required": false,
+          "structure": {
+            "name": "variant",
+            "type": "JSON",
+            "info": "JSON object of variant",
+            "required": false
+          }
         },
         {
           "name": "tags",
@@ -2453,9 +2459,15 @@
         },
         {
           "name": "variants",
-          "type": "JSON",
-          "info": "Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant..",
-          "required": false
+          "type": "List",
+          "info": "List of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant..",
+          "required": false,
+          "structure": {
+            "name": "variant",
+            "type": "JSON",
+            "info": "JSON of variant object",
+            "required": false
+          }
         },
         {
           "name": "tags",
@@ -3330,9 +3342,15 @@
         },
         {
           "name": "transactions",
-          "type": "JSON",
-          "info": "Array of JSON objects. Array of transactions to process as refunds.",
-          "required": true
+          "type": "List",
+          "info": "List of JSON objects. Array of transactions to process as refunds.",
+          "required": true,
+          "structure": {
+            "name": "transaction",
+            "type": "JSON",
+            "info": "JSON Object of transaction",
+            "required": true
+          }
         },
         {
           "name": "restock",
@@ -3413,9 +3431,15 @@
         },
         {
           "name": "refundLineItems",
-          "type": "JSON",
-          "info": "Array of JSON objects. Array of line item IDs and quantities to refund.",
-          "required": true
+          "type": "List",
+          "info": "List of JSON objects. Array of line item IDs and quantities to refund.",
+          "required": true,
+          "structure": {
+            "name": "item",
+            "type": "JSON",
+            "info": "JSON object of item",
+            "required": true
+          }
         },
         {
           "name": "restock",
@@ -4137,9 +4161,15 @@
         },
         {
           "name": "rules",
-          "type": "JSON",
-          "info": "Array of JSON objects. The list of rules that define what products go into the smart collection.",
-          "required": false
+          "type": "List",
+          "info": "List of JSON objects. The list of rules that define what products go into the smart collection.",
+          "required": false,
+          "structure": {
+            "name": "rule",
+            "type": "JSON",
+            "info": "JSON Object rule",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -4202,9 +4232,15 @@
         },
         {
           "name": "rules",
-          "type": "JSON",
-          "info": "Array of JSON objects. The list of rules that define what products go into the smart collection.",
-          "required": false
+          "type": "List",
+          "info": "List of JSON objects. The list of rules that define what products go into the smart collection.",
+          "required": false,
+          "structure": {
+            "name": "rule",
+            "type": "JSON",
+            "info": "JSON object rule",
+            "required": false
+          }
         }
       ],
       "callbacks": [

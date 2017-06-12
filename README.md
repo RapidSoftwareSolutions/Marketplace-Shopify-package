@@ -537,7 +537,7 @@ Create a new product.
 | productType| String     | A categorization that a product can be tagged with, commonly used for filtering and searching.
 | imageSrc   | File       | Image associated with the product.
 | vendor     | String     | The name of the vendor of the product.
-| variants   | JSON       | Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant.
+| variants   | List       | List of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant.
 | tags       | List       | A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.
 | published  | Boolean    | Is published product.
 
@@ -569,7 +569,7 @@ Update a product and associated variants and images.
 | bodyHtml   | String     | The description of the product, complete with HTML formatting.
 | productType| String     | A categorization that a product can be tagged with, commonly used for filtering and searching.
 | vendor     | String     | The name of the vendor of the product.
-| variants   | JSON       | Array of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant..
+| variants   | List       | List of JSON objects. List of variant objects, each one representing a slightly different version of the product. For example, if a product comes in different sizes and colors, each size and color permutation (such as 'small black', 'medium black', 'large blue'), would be a variant..
 | tags       | List       | A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.
 | published  | Boolean    | Is published product.
 
@@ -809,7 +809,7 @@ Refund single or several transactions from an existing order.
 | shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId           | Number     | The unique numeric identifier for the order. This one is used for API purposes.
-| transactions      | JSON       | Array of JSON objects. Array of transactions to process as refunds.
+| transactions      | List       | List of JSON objects. Array of transactions to process as refunds.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
 | notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
 | note              | String     | An optional comment attached to a refund.
@@ -837,7 +837,7 @@ Refund single or several items from an existing order.
 | shopName          | String     | Domain of your shop.
 | accessToken       | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId           | Number     | The unique numeric identifier for the order. This one is used for API purposes.
-| refundLineItems   | JSON       | Array of JSON objects. Array of line item IDs and quantities to refund.
+| refundLineItems   | List       | List of JSON objects. Array of line item IDs and quantities to refund.
 | restock           | Boolean    | Boolean, whether or not to add the line items back to the store inventory.
 | notify            | Boolean    | Boolean, set to true to send a refund notification to the customer.
 | note              | String     | An optional comment attached to a refund.
@@ -999,7 +999,7 @@ Create a new smart collection.
 | bodyHtml   | String     | The description of the smart collection, complete with HTML markup. Many templates display this on their smart collection page.
 | imageSrc   | File       | The collection image.
 | published  | Boolean    | Is published collection.
-| rules      | JSON       | Array of JSON objects. The list of rules that define what products go into the smart collection.
+| rules      | List       | List of JSON objects. The list of rules that define what products go into the smart collection.
 
 #### rules format
 ```json
@@ -1024,7 +1024,7 @@ Update an existing smart collection.
 | bodyHtml         | String     | The description of the smart collection, complete with HTML markup. Many templates display this on their smart collection page.
 | imageSrc         | File       | The collection image.
 | published        | Boolean    | Is published collection.
-| rules            | JSON       | Array of JSON objects. The list of rules that define what products go into the smart collection.
+| rules            | List       | List of JSON objects. The list of rules that define what products go into the smart collection.
 
 #### rules format
 ```json

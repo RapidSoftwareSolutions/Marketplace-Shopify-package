@@ -4594,8 +4594,7 @@ return [
                         ],
                     'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/customers/{{customerId}}.json',
                     'method' => 'PUT',
-                    'wrap' => 'customer',
-                    'custom' => true
+                    'wrap' => 'customer'
                 ],
             'createAccountActivationURL' =>
                 [

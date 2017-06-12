@@ -370,13 +370,6 @@ class CustomModel
         return json_encode($param);
     }
 
-    public static function updateCustomer($param, $blockCustom, $vendorUrl)
-    {
-        self::createStringFromList($param, 'tags');
-
-        return json_encode($param);
-    }
-
     public static function getSingleEvent($param, $blockCustom, $vendorUrl)
     {
         self::createStringFromList($param, 'fields');
