@@ -2749,8 +2749,14 @@
         {
           "name": "imageSrc",
           "type": "File",
-          "info": "Specifies the location of the product image.",
-          "required": true
+          "info": "Specifies the location of the product image. Use one of imageSrc or attachment",
+          "required": false
+        },
+        {
+          "name": "attachment",
+          "type": "String",
+          "info": "Base64 of image file. Use one of imageSrc or attachment",
+          "required": false
         },
         {
           "name": "filename",

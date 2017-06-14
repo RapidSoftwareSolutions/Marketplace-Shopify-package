@@ -645,6 +645,7 @@ Create a new product image.
 | accessToken        | String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | productId          | Number     | The unique numeric identifier for the product.
 | imageSrc           | File       | Specifies the location of the product image.
+| attachment         | String     | Base64 of image file. Use one of imageSrc or attachment
 | filename           | String     | Custom image file name.
 | position           | String     | The order of the product image in the list. The first product image is at position 1 and is the 'main' image for the product.
 | metafieldsKey      | String     | Identifier for the metafield (maximum of 30 characters).

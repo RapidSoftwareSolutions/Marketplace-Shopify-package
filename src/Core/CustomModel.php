@@ -154,10 +154,6 @@ class CustomModel
         if (count($metafields) > 0) {
             $param['metafields'] = $metafields;
         }
-        if (isset($param['imageSrc']) && strlen($param['imageSrc']) > 0) {
-            $param['image']['src'] = $param['imageSrc'];
-            unset($param['imageSrc']);
-        }
         if (!empty($param['variant_ids']) && !is_array($param['variant_ids'])) {
             $variantIds = explode(',', $param['variant_ids']);
             array_walk($variantIds, function (&$val, $key) {
@@ -165,13 +161,14 @@ class CustomModel
             });
             $param['variant_ids'] = $variantIds;
         }
+        $test = file_get_contents($param['src']);
+        $test2 = base64_encode($test);
+        unset($param['shopName'], $param['productId']);
         if (isset($blockCustom['wrap']) && strlen($blockCustom['wrap']) > 0) {
             $result[$blockCustom['wrap']] = $param;
         } else {
             $result = $param;
         }
-        $ret['callback'] = 'success';
-        $ret['contextWrites']['to'] = $result;
 
         return json_encode($result);
     }

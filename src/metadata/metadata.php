@@ -2642,7 +2642,13 @@ return [
                             'name' => 'imageSrc',
                             'type' => 'File',
                             'info' => 'Specifies the location of the product image.',
-                            'required' => true,
+                            'required' => false,
+                        ],
+                        [
+                            'name' => 'attachment',
+                            'type' => 'String',
+                            'info' => 'Base64 of image file. Use with filename',
+                            'required' => false
                         ],
                         [
                             'name' => 'filename',
@@ -4890,6 +4896,7 @@ return [
                             'accessToken' => 'accessToken',
                             'productId' => 'productId',
                             'imageSrc' => 'src',
+                            'attachment' => 'attachment',
                             'filename' => 'filename',
                             'position' => 'position',
                             'metafieldsKey' => 'key',
