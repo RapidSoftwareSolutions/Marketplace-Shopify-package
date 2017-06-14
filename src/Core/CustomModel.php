@@ -531,6 +531,17 @@ class CustomModel
         return json_encode($param);
     }
 
+    public static function getAllApplicationCharges($param, $blockCustom, $vendorUrl)
+    {
+        if (!empty($param['fields'])) {
+            $param['fields'] = implode(',', $param['fields']);
+        }
+
+        unset($param['shopName']);
+
+        return json_encode($param);
+    }
+
     private static function createDate(&$param, $argName)
     {
         if (!empty($param[$argName])) {

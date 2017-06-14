@@ -3737,6 +3737,169 @@
       ]
     },
     {
+      "name": "createApplicationCharge",
+      "description": "Create a new application charge.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "String",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "info": "Name of application charge",
+          "required": true
+        },
+        {
+          "name": "price",
+          "type": "String",
+          "info": "Price of new application charge",
+          "required": true
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "info": "Url to return",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getSingleApplicationCharge",
+      "description": "Get application charge by ID",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "String",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
+        },
+        {
+          "name": "applicationChargeId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the application charge.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "getAllApplicationCharges",
+      "description": "Get all application charges",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "String",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
+        },
+        {
+          "name": "sinceId",
+          "type": "Number",
+          "info": "Restrict results to after the specified ID",
+          "required": false
+        },
+        {
+          "name": "fields",
+          "type": "List",
+          "info": "List of fields to include in the response",
+          "required": false,
+          "structure": {
+            "name": "applicationChargeId",
+            "type": "Number",
+            "info": "Application ID to include in response",
+            "required": false
+          }
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
+      "name": "activateApplicationCharge",
+      "description": "Activate a previously accepted one-time application charge.",
+      "args": [
+        {
+          "name": "shopName",
+          "type": "String",
+          "info": "Domain of your shop.",
+          "required": true
+        },
+        {
+          "name": "accessToken",
+          "type": "String",
+          "info": "API access token that can be used to access the shop’s data as long as the client is installed.",
+          "required": true,
+          "generator": "https://rapidoauth.com/shopify"
+        },
+        {
+          "name": "applicationChargeId",
+          "type": "Number",
+          "info": "A unique numeric identifier for the application charge.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "Error"
+        },
+        {
+          "name": "success",
+          "info": "Success"
+        }
+      ]
+    },
+    {
       "name": "createUsageCharge",
       "description": "Create a new charge.",
       "args": [

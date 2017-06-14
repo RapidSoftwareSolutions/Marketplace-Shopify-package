@@ -3588,6 +3588,168 @@ return [
                     ],
             ],
             [
+                'name' => 'createApplicationCharge',
+                'description' => 'Create a new application charge.',
+                'args' =>
+                    [
+                        [
+                            'name' => 'shopName',
+                            'type' => 'String',
+                            'info' => 'Domain of your shop.',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'accessToken',
+                            'type' => 'String',
+                            'info' => 'API access token that can be used to access the shop’s data as long as the client is installed.',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'name',
+                            'type' => 'String',
+                            'info' => 'Name of application charge',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'price',
+                            'type' => 'String',
+                            'info' => 'Price of new application charge',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'url',
+                            'type' => 'String',
+                            'info' => 'Url to return',
+                            'required' => false
+                        ]
+                    ],
+                'callbacks' =>
+                    [
+                        [
+                            'name' => 'error',
+                            'info' => 'Error',
+                        ],
+                        [
+                            'name' => 'success',
+                            'info' => 'Success',
+                        ]
+                    ]
+            ],
+            [
+                'name' => 'getSingleApplicationCharge',
+                'description' => 'Get application charge by ID',
+                'args' =>
+                    [
+                        [
+                            'name' => 'shopName',
+                            'type' => 'String',
+                            'info' => 'Domain of your shop.',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'accessToken',
+                            'type' => 'String',
+                            'info' => 'API access token that can be used to access the shop’s data as long as the client is installed.',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'applicationChargeId',
+                            'type' => 'Number',
+                            'info' => 'A unique numeric identifier for the application charge.',
+                            'required' => true
+                        ]
+                    ],
+                'callbacks' =>
+                    [
+                        [
+                            'name' => 'error',
+                            'info' => 'Error',
+                        ],
+                        [
+                            'name' => 'success',
+                            'info' => 'Success',
+                        ]
+                    ],
+            ],
+            [
+                'name' => 'getAllApplicationCharges',
+                'description' => 'Get application charge by ID',
+                'args' =>
+                    [
+                        [
+                            'name' => 'shopName',
+                            'type' => 'String',
+                            'info' => 'Domain of your shop.',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'accessToken',
+                            'type' => 'String',
+                            'info' => 'API access token that can be used to access the shop’s data as long as the client is installed.',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'sinceId',
+                            'type' => 'Number',
+                            'info' => 'Restrict results to after the specified ID',
+                            'required' => false
+                        ],
+                        [
+                            'name' => 'fields',
+                            'type' => 'List',
+                            'info' => 'List of fields to include in the response',
+                            'required' => false
+                        ]
+                    ],
+                'callbacks' =>
+                    [
+                        [
+                            'name' => 'error',
+                            'info' => 'Error',
+                        ],
+                        [
+                            'name' => 'success',
+                            'info' => 'Success',
+                        ]
+                    ],
+            ],
+            [
+                'name' => 'activateApplicationCharge',
+                'description' => 'Activate a previously accepted one-time application charge.',
+                'args' =>
+                    [
+                        [
+                            'name' => 'shopName',
+                            'type' => 'String',
+                            'info' => 'Domain of your shop.',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'accessToken',
+                            'type' => 'String',
+                            'info' => 'API access token that can be used to access the shop’s data as long as the client is installed.',
+                            'required' => true
+                        ],
+                        [
+                            'name' => 'applicationChargeId',
+                            'type' => 'Number',
+                            'info' => 'A unique numeric identifier for the application charge.',
+                            'required' => true
+                        ]
+                    ],
+                'callbacks' =>
+                    [
+                        [
+                            'name' => 'error',
+                            'info' => 'Error',
+                        ],
+                        [
+                            'name' => 'success',
+                            'info' => 'Success',
+                        ]
+                    ],
+            ],
+            [
                 'name' => 'createUsageCharge',
                 'description' => 'Create a new charge.',
                 'args' =>
@@ -5173,6 +5335,58 @@ return [
                     'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/orders/{{orderId}}/transactions.json',
                     'method' => 'POST',
                     'wrap' => 'transaction',
+                ],
+            'createApplicationCharge' =>
+                [
+                    'dictionary' =>
+                        [
+                            'shopName' => 'shopName',
+                            'accessToken' => 'accessToken',
+                            'name' => 'name',
+                            'price' => 'price',
+                            'url' => 'return_url',
+                        ],
+                    'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/application_charges.json',
+                    'method' => 'POST',
+                    'wrap' => 'application_charge',
+                ],
+            'getSingleApplicationCharge' =>
+                [
+                    'dictionary' =>
+                        [
+                            'shopName' => 'shopName',
+                            'accessToken' => 'accessToken',
+                            'applicationChargeId' => 'applicationChargeId'
+                        ],
+                    'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/application_charges/{{applicationChargeId}}.json',
+                    'method' => 'GET',
+                    'wrap' => '',
+                ],
+            'getAllApplicationCharges' =>
+                [
+                    'dictionary' =>
+                        [
+                            'shopName' => 'shopName',
+                            'accessToken' => 'accessToken',
+                            'sinceId' => 'since_id',
+                            'fields' => 'fields'
+                        ],
+                    'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/application_charges.json',
+                    'method' => 'GET',
+                    'wrap' => '',
+                    'custom' => true
+                ],
+            'activateApplicationCharge' =>
+                [
+                    'dictionary' =>
+                        [
+                            'shopName' => 'shopName',
+                            'accessToken' => 'accessToken',
+                            'applicationChargeId' => 'applicationChargeId'
+                        ],
+                    'vendorUrl' => 'https://{{shopName}}.myshopify.com/admin/application_charges/{{applicationChargeId}}/activate.json',
+                    'method' => 'POST',
+                    'wrap' => ''
                 ],
             'createUsageCharge' =>
                 [
