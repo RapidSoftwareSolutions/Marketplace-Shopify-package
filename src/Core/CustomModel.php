@@ -433,7 +433,7 @@ class CustomModel
     {
         self::createStringFromList($param, 'tags');
 
-        return json_encode($param);
+        return json_encode([$blockCustom['wrap'] => $param]);
     }
 
     public static function getProductImages($param, $blockCustom, $vendorUrl)

@@ -209,7 +209,7 @@ List all collects or only those for specific products or collections.
 | collectionId| Number     | The id of the custom collection containing the product.
 | page        | Number     | Page to show (default: 1).
 | limit       | Number     | Amount of results (default: 50) (maximum: 250).
-| fields      | String     | Comma-separated list of fields to include in the response.
+| fields      | List       | List of fields to include in the response.
 
 ## Shopify.getCollectsCount
 Get a count of all collects or only those for specific products or collections.
@@ -378,7 +378,7 @@ Update a customer.
 | firstName  | String     | The customer's first name.
 | lastName   | String     | The customer's last name.
 | email      | String     | The email address of the customer.
-| tags       | List       | Tags are additional short descriptors formatted as a string of comma-separated values. For example, if an article has three tags: tag1, tag2, tag3.
+| tags       | List       | Tags are additional short descriptors formatted as a string of values. For example, if an article has three tags: tag1, tag2, tag3.
 | note       | String     | A note about the customer.
 
 ## Shopify.createAccountActivationURL
@@ -877,7 +877,7 @@ Get the Representation of all money transfers.
 | accessToken| String     | API access token that can be used to access the shop’s data as long as the client is installed.
 | orderId    | Number     | The unique numeric identifier for the refund. This one is used for API purposes.
 | sinceId    | Number     | Restrict results to after the specified ID.
-| fields     | String     | comma-separated list of fields to include in the response.
+| fields     | List       | List of fields to include in the response.
 
 ## Shopify.getTransactionsCount
 Count all a given order’s money transfers.

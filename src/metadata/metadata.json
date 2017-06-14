@@ -767,9 +767,15 @@
         },
         {
           "name": "fields",
-          "type": "String",
-          "info": "Comma-separated list of fields to include in the response.",
-          "required": false
+          "type": "List",
+          "info": "List of fields to include in the response.",
+          "required": false,
+          "structure": {
+            "name": "field",
+            "type": "String",
+            "info": "Field",
+            "required": false
+          }
         }
       ],
       "callbacks": [
@@ -2472,7 +2478,7 @@
         {
           "name": "tags",
           "type": "List",
-          "info": "A categorization that a product can be tagged with, commonly used for filtering and searching. Each comma-separated tag has a character limit of 255.",
+          "info": "A categorization that a product can be tagged with, commonly used for filtering and searching. Each tag has a character limit of 255.",
           "required": false,
           "structure": {
             "name": "tag",
