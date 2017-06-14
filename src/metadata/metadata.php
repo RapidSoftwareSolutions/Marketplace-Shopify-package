@@ -3776,13 +3776,13 @@ return [
                             'name' => 'description',
                             'type' => 'String',
                             'info' => 'The name of the usage charge.',
-                            'required' => false,
+                            'required' => true,
                         ],
                         [
                             'name' => 'price',
                             'type' => 'String',
                             'info' => 'The price of the usage charge.',
-                            'required' => false,
+                            'required' => true,
                         ],
                     ],
                 'callbacks' =>
