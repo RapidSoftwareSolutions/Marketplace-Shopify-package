@@ -40,13 +40,11 @@ class Router
             $requestBody = file_get_contents('php://input');
             $requestBody = $this->normalizeJson($requestBody);
             $requestBody = str_replace('\"', '"', $requestBody);
-            $requestBody = json_decode($requestBody);
-
-
+            $requestBody = json_decode($requestBody, true);
             $reply = [
                 "http_resp" => '',
-                "client_msg" => $requestBody->body,
-                "params" => $requestBody->params
+                "client_msg" => $requestBody['args']['body'],
+                "params" => $requestBody['args']['params']
             ];
             echo json_encode($reply);
             exit(200);
