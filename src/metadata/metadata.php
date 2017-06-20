@@ -66,6 +66,25 @@ return [
                     ],
             ],
             [
+                'name' => 'webhookEvent',
+                'description' => 'Fetch access token.',
+                'args' =>
+                    [
+
+                    ],
+                'callbacks' =>
+                    [
+                        [
+                            'name' => 'error',
+                            'info' => 'Error',
+                        ],
+                        [
+                            'name' => 'success',
+                            'info' => 'Success',
+                        ],
+                    ],
+            ],
+            [
                 'name' => 'getAbandonedCheckoutsCount',
                 'description' => 'Get a count of abandoned checkouts.',
                 'args' =>
