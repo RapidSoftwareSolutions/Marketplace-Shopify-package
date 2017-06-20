@@ -46,6 +46,14 @@ class Router
                 "client_msg" => $requestBody['args']['body'],
                 "params" => $requestBody['args']['params']
             ];
+
+            $client = $this->http;
+            $client->post("https://02d66111.ngrok.io", [
+                'json' => $reply
+            ]);
+
+
+
             echo json_encode($reply);
             exit(200);
         });
