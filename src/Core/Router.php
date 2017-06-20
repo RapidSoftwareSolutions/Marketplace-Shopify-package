@@ -47,14 +47,9 @@ class Router
                 "params" => $requestBody['args']['params']
             ];
 
-            $client = $this->http;
-            $client->post("https://02d66111.ngrok.io", [
-                'json' => $reply
-            ]);
-
-
-
-            echo json_encode($reply);
+            $result['callback'] = 'success';
+            $result['contextWrites']['to'] = $reply;
+            echo json_encode($result);
             exit(200);
         });
 
