@@ -71,18 +71,7 @@ return [
                 'args' =>
                     [
 
-                    ],
-                'callbacks' =>
-                    [
-                        [
-                            'name' => 'error',
-                            'info' => 'Error',
-                        ],
-                        [
-                            'name' => 'success',
-                            'info' => 'Success',
-                        ],
-                    ],
+                    ]
             ],
             [
                 'name' => 'getAbandonedCheckoutsCount',
@@ -4354,6 +4343,12 @@ return [
                     'method' => 'POST',
                     'wrap' => '',
                 ],
+            'webhookEvent' => [
+                'dictionary' => [
+                ],
+                'vendorUrl' => '',
+                'method' => 'POST'
+            ],
             'getAbandonedCheckoutsCount' =>
                 [
                     'dictionary' =>
