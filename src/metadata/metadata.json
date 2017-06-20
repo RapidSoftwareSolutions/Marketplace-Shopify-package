@@ -17,6 +17,27 @@
       "clientSecret"
     ]
   },
+  "events": [
+    {
+      "name": "webhookEvent",
+      "description": "This method is called every time when webhook event happens",
+      "payload": {
+
+      },
+      "steps": [
+        "Go to add addWebhook block",
+        "Set webhookUrl to __WEBHOOK_URL__"
+      ],
+      "args": [
+        {
+          "name": "token",
+          "type": "string",
+          "info": "Token sent on each message",
+          "required": true
+        }
+      ]
+    }
+  ],
   "blocks": [
     {
       "name": "getAccessToken",
