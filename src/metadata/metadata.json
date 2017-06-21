@@ -22,7 +22,30 @@
       "name": "webhookEvent",
       "description": "This method is called every time when webhook event happens",
       "payload": {
-
+        "id": "eeafa272cebfd4b22385bc4b645e762c",
+        "token": "eeafa272cebfd4b22385bc4b645e762c",
+        "line_items": [
+          {
+            "id": 704912205188288500,
+            "properties": {},
+            "quantity": 3,
+            "variant_id": 704912205188288500,
+            "key": "704912205188288575:33f11f7a1ec7d93b826de33bb54de37b",
+            "title": "Example T-Shirt - ",
+            "price": "19.99",
+            "original_price": "19.99",
+            "discounted_price": "19.99",
+            "line_price": "59.97",
+            "original_line_price": "59.97",
+            "total_discount": "0.00",
+            "discounts": [],
+            "sku": "example-shirt-s",
+            "grams": 200,
+            "vendor": "Acme",
+            "product_id": 788032119674292900,
+            "gift_card": false
+          }
+        ]
       },
       "steps": [
         "Go to add addWebhook block",
