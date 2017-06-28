@@ -20,7 +20,7 @@
   "events": [
     {
       "name": "webhookEvent",
-      "description": "This method is called every time when webhook event happens",
+      "description": "This method is called every time a shopify event occurs on a shop",
       "payload": {
         "id": "eeafa272cebfd4b22385bc4b645e762c",
         "token": "eeafa272cebfd4b22385bc4b645e762c",
@@ -48,8 +48,9 @@
         ]
       },
       "steps": [
-        "Go to add addWebhook block",
-        "Set webhookUrl to __WEBHOOK_URL__"
+        "Login to your Shopify admin panel, click settings, and then notifications",
+        "At the bottom of the page, in the webhooks section, select create a webhook",
+        "Choose which event you want to be notified for and enter the following URL: __WEBHOOK_URL__"
       ],
       "args": [
         {
