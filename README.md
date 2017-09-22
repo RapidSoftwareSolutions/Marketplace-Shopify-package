@@ -15,9 +15,7 @@ Shopify is platform for ecommerce.
    * https://{shop}.myshopify.com/admin/oauth/authorize?client_id={api_key}&scope={scopes}&redirect_uri={redirect_uri}&state={nonce}&grant_options[]={option}
    * About link syntax you can read [HERE](https://help.shopify.com/api/guides/authentication/oauth#asking-for-permission)
 6. In redirect link, one of parameter will be "code", which we will use next.
-7. Finally to get access token use "getAccessToken" block in this package.
-8. That's all. Have fun!
-
+7. Finally to get access token use [getAccessToken](https://rapidapi.com/package/Shopify/functions/getAccessToken?utm_source=RapidAPIGitHub_getAccessToken&utm_medium=README_configuration&utm_campaign=RapidAPI_GitHub) block in this package.
 
 ## Custom datatypes: 
  |Datatype|Description|Example
