@@ -71,7 +71,7 @@
     "To get access token, which used in all blocks of package as required field, first of all you need redirect the shop owner to this URL: https://{shop}.myshopify.com/admin/oauth/authorize?client_id={api_key}&scope={scopes}&redirect_uri={redirect_uri}&state={nonce}&grant_options[]={option}",
     "About link syntax you can read here: https://help.shopify.com/api/guides/authentication/oauth#asking-for-permission",
     "In redirect link, one of parameter will be 'code', which we will use next",
-    "Finally to get access token use getAccessToken function (https://rapidapi.com/package/Shopify/functions/getAccessToken)", 
+    "Finally to get access token use getAccessToken function (https://rapidapi.com/package/Shopify/functions/getAccessToken)"
   ],
   "blocks": [
     {
